@@ -1,0 +1,17 @@
+<svg width="1100" height="330" viewBox="0 0 1100 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="330" rx="18" fill="#0D1117"/>
+  <rect x="28" y="26" width="1044" height="278" rx="14" fill="#161B22" stroke="#30363D"/>
+  <text x="56" y="70" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="750">About Me</text>
+  <line x1="56" y1="100" x2="1044" y2="100" stroke="#30363D"/>
+
+  <text x="64" y="140" fill="#8B949E" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">Base</text>
+  <text x="250" y="140" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">2020 年 HDU 信息安全本科毕业</text>
+  <line x1="56" y1="160" x2="1044" y2="160" stroke="#21262D"/>
+
+  <text x="64" y="198" fill="#8B949E" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">Current</text>
+  <text x="250" y="198" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">还在华子写代码，主要活动范围是安全工具链、后端服务、云原生工程化</text>
+  <line x1="56" y1="218" x2="1044" y2="218" stroke="#21262D"/>
+
+  <text x="64" y="256" fill="#8B949E" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">Moving Toward</text>
+  <text x="250" y="256" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">Agent 应用开发 / AI 安全治理 / Agent Governance</text>
+</svg>

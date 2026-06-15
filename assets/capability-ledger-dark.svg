@@ -1,0 +1,30 @@
+<svg width="1100" height="360" viewBox="0 0 1100 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="360" rx="18" fill="#0D1117"/>
+  <rect x="28" y="26" width="1044" height="308" rx="14" fill="#161B22" stroke="#30363D"/>
+  <text x="56" y="70" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="750">Tech Stack</text>
+  <line x1="56" y1="100" x2="1044" y2="100" stroke="#30363D"/>
+
+  <rect x="56" y="124" width="478" height="64" rx="12" fill="#0D1117" stroke="#30363D"/>
+  <text x="82" y="150" fill="#79C0FF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Languages</text>
+  <text x="82" y="174" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Python / Java / Go / JavaScript</text>
+
+  <rect x="566" y="124" width="478" height="64" rx="12" fill="#0D1117" stroke="#30363D"/>
+  <text x="592" y="150" fill="#79C0FF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Backend</text>
+  <text x="592" y="174" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Spring Boot / FastAPI / REST API / Microservices</text>
+
+  <rect x="56" y="204" width="478" height="64" rx="12" fill="#0D1117" stroke="#30363D"/>
+  <text x="82" y="230" fill="#7EE787" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Security</text>
+  <text x="82" y="254" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">PKI / X.509 / PKCS#7 / HSM / JWT / mTLS / YARA</text>
+
+  <rect x="566" y="204" width="478" height="64" rx="12" fill="#0D1117" stroke="#30363D"/>
+  <text x="592" y="230" fill="#7EE787" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Supply Chain</text>
+  <text x="592" y="254" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">SBOM / SPDX / CycloneDX / Sigstore / SLSA</text>
+
+  <rect x="56" y="284" width="478" height="36" rx="12" fill="#161B22" stroke="#30363D"/>
+  <text x="82" y="307" fill="#D2A8FF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Cloud Native</text>
+  <text x="208" y="307" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Docker / Kubernetes / CI/CD / API Gateway</text>
+
+  <rect x="566" y="284" width="478" height="36" rx="12" fill="#161B22" stroke="#30363D"/>
+  <text x="592" y="307" fill="#D2A8FF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Tools</text>
+  <text x="656" y="307" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Git / Linux / Pytest / Mockito / BurpSuite</text>
+</svg>

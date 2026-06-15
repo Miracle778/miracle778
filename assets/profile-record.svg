@@ -1,7 +1,7 @@
 <svg width="1100" height="330" viewBox="0 0 1100 330" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1100" height="330" rx="18" fill="#F6F8FA"/>
   <rect x="28" y="26" width="1044" height="278" rx="14" fill="#FFFFFF" stroke="#D0D7DE"/>
-  <text x="56" y="70" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="750">Profile Record</text>
+  <text x="56" y="70" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="750">About Me</text>
   <line x1="56" y1="100" x2="1044" y2="100" stroke="#D8DEE4"/>
 
   <text x="64" y="140" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">Base</text>

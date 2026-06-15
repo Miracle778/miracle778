@@ -1,7 +1,7 @@
 <svg width="1100" height="360" viewBox="0 0 1100 360" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1100" height="360" rx="18" fill="#F6F8FA"/>
   <rect x="28" y="26" width="1044" height="308" rx="14" fill="#FFFFFF" stroke="#D0D7DE"/>
-  <text x="56" y="70" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="750">Capability Ledger</text>
+  <text x="56" y="70" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="750">Tech Stack</text>
   <line x1="56" y1="100" x2="1044" y2="100" stroke="#D8DEE4"/>
 
   <rect x="56" y="124" width="478" height="64" rx="12" fill="#F6F8FA" stroke="#D0D7DE"/>

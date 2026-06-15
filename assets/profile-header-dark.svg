@@ -1,0 +1,14 @@
+<svg width="1100" height="220" viewBox="0 0 1100 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="220" rx="18" fill="#0D1117"/>
+  <rect x="28" y="26" width="1044" height="168" rx="14" fill="#161B22" stroke="#30363D"/>
+  <text x="58" y="76" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="34" font-weight="750">Miracle778</text>
+  <text x="60" y="108" fill="#8B949E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">Security Dev / Agent Apps / AI Governance</text>
+
+  <line x1="60" y1="132" x2="1040" y2="132" stroke="#30363D"/>
+  <rect x="60" y="150" width="210" height="30" rx="15" fill="#102A43" stroke="#1F6FEB"/>
+  <text x="95" y="170" fill="#79C0FF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="650">2020 HDU InfoSec</text>
+  <rect x="292" y="150" width="186" height="30" rx="15" fill="#0F2A1A" stroke="#238636"/>
+  <text x="338" y="170" fill="#7EE787" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="650">Security Dev</text>
+  <rect x="500" y="150" width="226" height="30" rx="15" fill="#271A36" stroke="#8957E5"/>
+  <text x="551" y="170" fill="#D2A8FF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="650">Agent Governance</text>
+</svg>
