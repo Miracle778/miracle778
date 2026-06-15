@@ -4,6 +4,12 @@
   <img src="./assets/profile-header.svg" alt="Miracle778 - Open Source Ledger" width="100%" />
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/2020-HDU%20InfoSec-0969da?style=flat-square" alt="2020 HDU InfoSec" />
+  <img src="https://img.shields.io/badge/Now-Security%20Dev-1f883d?style=flat-square" alt="Security Dev" />
+  <img src="https://img.shields.io/badge/Focus-Agent%20Governance-8250df?style=flat-square" alt="Agent Governance" />
+</p>
+
 2020 年信安专业本科毕业，一直在菊厂干到现在，在华子干开发，这辈子也算是有了🤤，没招了，只能闲时借助codex老师、claude老师研究点赛博柑水了...  
 
 之前都是传统安全工具开发，现在逐步转向 **Agent 应用开发** 与 **AI 安全治理**中。
@@ -11,24 +17,32 @@
 ---
 
 ## About Me
-- 2020 年HDU本科毕业进了华子。
-- 日常技术栈主要围绕 Python / Java、Spring Boot、微服务、云原生、CI/CD、安全工具链这些方向。
-- 安全侧长期接触 PKI、X.509、HSM、JWT、mTLS、YARA、软件供应链安全等工程化能力。
-- 最近对 Sigstore、SLSA、SBOM、AI 资产可信签名、Agent 安全治理这些方向比较感兴趣。
-- 最近重点转向 Agent Governance、AI Gateway、Tool Calling 审计、PII 检测、权限边界与 AI 安全治理。
 
+<table>
+  <tr>
+    <td width="50%">
+      <b>Base</b><br>
+      2020 年 HDU 信息安全本科毕业，目前还在华子写代码。<br><br>
+      主要活动范围：安全工具链、后端服务、云原生工程化。
+    </td>
+    <td width="50%">
+      <b>Now</b><br>
+      从传统安全工具开发，慢慢转向 Agent 应用开发与 AI 安全治理。<br><br>
+      不是大佬，主打一个边补课边把记录留下。
+    </td>
+  </tr>
+</table>
 
 ---
 
-## Current Focus
+## Ledger Index
 
-| Direction | What I'm Working On |
-|---|---|
-| Agent Governance | Agent 身份、权限边界、治理中间件、策略拦截 |
-| AI Security | OWASP LLM / Agent 风险、PII 检测、Tool Calling 审计 |
-| AI Trust Infrastructure | Sigstore、Vault、透明日志、AI 资产签名与验签 |
-| Cloud Native Security | DevSecOps、软件供应链安全、SBOM/OBOM、CVE 分析 |
-| Agent Engineering | AI Gateway、Agent Mesh、DevOps Agent、CVE Analysis Agent |
+| Track | Current Notes | Proof I Want To Accumulate |
+|---|---|---|
+| Agent Governance | 身份、权限边界、治理中间件、策略拦截 | Issue / RFC / Design discussion |
+| AI Security | OWASP LLM / Agent 风险、PII 检测、Tool Calling 审计 | Issue / PR / Example |
+| Trust Infrastructure | Sigstore、SLSA、透明日志、AI 资产签名与验签 | Notes / PoC / RFC |
+| Cloud Native Security | DevSecOps、软件供应链安全、CVE 分析 | Issue / PR / Tooling |
 
 ---
 
@@ -49,14 +63,20 @@
 
 平时接触的技术栈放这里，尽量只写能力域，不展开具体历史项目。
 
-| Category | Keywords |
-|---|---|
-| Languages | Python, Java, Go, JavaScript |
-| Backend | Spring Boot, FastAPI, REST API, Microservices |
-| Security | PKI, X.509, PKCS#7, HSM, JWT, mTLS, YARA |
-| Supply Chain | SBOM, OBOM, SPDX, CycloneDX, Sigstore, SLSA |
-| Cloud Native | Docker, Kubernetes, CI/CD, API Gateway, 灰度发布, 限流熔断 |
-| Testing & Tools | Git, Linux, Pytest, Mockito, BurpSuite |
+<table>
+  <tr>
+    <td width="50%"><b>Languages</b><br>Python, Java, Go, JavaScript</td>
+    <td width="50%"><b>Backend</b><br>Spring Boot, FastAPI, REST API, Microservices</td>
+  </tr>
+  <tr>
+    <td width="50%"><b>Security</b><br>PKI, X.509, PKCS#7, HSM, JWT, mTLS, YARA</td>
+    <td width="50%"><b>Supply Chain</b><br>SBOM, SPDX, CycloneDX, Sigstore, SLSA</td>
+  </tr>
+  <tr>
+    <td width="50%"><b>Cloud Native</b><br>Docker, Kubernetes, CI/CD, API Gateway</td>
+    <td width="50%"><b>Testing & Tools</b><br>Git, Linux, Pytest, Mockito, BurpSuite</td>
+  </tr>
+</table>
 
 ---
 
