@@ -26,7 +26,12 @@
 <!-- CONTRIBUTIONS:START -->
 | Date | Repository | Stars | Type | Record | Status | Link |
 |---|---|---:|---|---|---|---|
-| - | Action 尚未运行 | - | - | 等待 GitHub Actions 自动拉取真实 Issue / PR 记录 | - | - |
+| 2026-06-14 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.3k | PR | [feat(examples): add DeerFlow governed example with AGT policy and audit integration](https://github.com/microsoft/agent-governance-toolkit/pull/3020) | Open | [View](https://github.com/microsoft/agent-governance-toolkit/pull/3020) |
+| 2026-06-02 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.3k | PR | [fix: record denied MCP example tool calls](https://github.com/microsoft/agent-governance-toolkit/pull/2774) | Merged | [View](https://github.com/microsoft/agent-governance-toolkit/pull/2774) |
+| 2026-05-31 | [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 51.2k | PR | [fix: 修复知乎 specified_id 和已有 Chrome CDP 连接问题](https://github.com/NanmiCoder/MediaCrawler/pull/909) | Open | [View](https://github.com/NanmiCoder/MediaCrawler/pull/909) |
+| 2026-05-31 | [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 51.2k | Issue | [[BUG] 知乎 detail 模式未使用 --specified_id，且现有 Chrome CDP 连接在新版 Chrome 下可能 404](https://github.com/NanmiCoder/MediaCrawler/issues/908) | Open | [View](https://github.com/NanmiCoder/MediaCrawler/issues/908) |
+| 2025-01-14 | [oshi/oshi](https://github.com/oshi/oshi) | 5.2k | Issue | [Memory speed unit "MT/s" not support parse](https://github.com/oshi/oshi/issues/2792) | Closed | [View](https://github.com/oshi/oshi/issues/2792) |
+| 2023-03-15 | [bcgit/bc-java](https://github.com/bcgit/bc-java) | 2.7k | Issue | [When the ContentType is 1.2.156.10197.6.1.4.2.2 (SM2SignedData), can I get a certificate by the generateCertificates function?](https://github.com/bcgit/bc-java/issues/1355) | Closed | [View](https://github.com/bcgit/bc-java/issues/1355) |
 <!-- CONTRIBUTIONS:END -->
 
 ---
