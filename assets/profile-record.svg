@@ -1,0 +1,21 @@
+<svg width="1100" height="330" viewBox="0 0 1100 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="330" rx="18" fill="#F6F8FA"/>
+  <rect x="28" y="26" width="1044" height="278" rx="14" fill="#FFFFFF" stroke="#D0D7DE"/>
+  <text x="56" y="70" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="750">Profile Record</text>
+  <text x="56" y="96" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="13">static.profile / minimal-ledger</text>
+  <line x1="56" y1="118" x2="1044" y2="118" stroke="#D8DEE4"/>
+
+  <text x="64" y="154" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">Base</text>
+  <text x="250" y="154" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">2020 年 HDU 信息安全本科毕业</text>
+  <line x1="56" y1="174" x2="1044" y2="174" stroke="#EAEEF2"/>
+
+  <text x="64" y="208" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">Current</text>
+  <text x="250" y="208" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">还在华子写代码，主要活动范围是安全工具链、后端服务、云原生工程化</text>
+  <line x1="56" y1="228" x2="1044" y2="228" stroke="#EAEEF2"/>
+
+  <text x="64" y="262" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">Moving Toward</text>
+  <text x="250" y="262" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">Agent 应用开发 / AI 安全治理 / Agent Governance</text>
+
+  <rect x="784" y="52" width="220" height="32" rx="16" fill="#DDF4FF" stroke="#54AEFF"/>
+  <text x="816" y="73" fill="#0969DA" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="650">facts first, no packaging</text>
+</svg>

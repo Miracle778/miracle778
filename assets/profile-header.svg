@@ -1,26 +1,19 @@
-<svg width="1100" height="310" viewBox="0 0 1100 310" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1100" height="310" rx="22" fill="#0D1117"/>
-  <rect x="34" y="30" width="1032" height="250" rx="18" fill="#161B22" stroke="#30363D"/>
-  <rect x="64" y="58" width="462" height="194" rx="14" fill="#0D1117" stroke="#30363D"/>
-  <text x="92" y="104" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="36" font-weight="750">Miracle778</text>
-  <text x="94" y="136" fill="#8B949E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">Security engineering -> Agent apps &amp; AI governance</text>
-  <line x1="94" y1="162" x2="496" y2="162" stroke="#30363D"/>
-  <text x="94" y="194" fill="#C9D1D9" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="15">profile.mode = "open-source-ledger"</text>
-  <text x="94" y="222" fill="#C9D1D9" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="15">proof.source = "issue / pr / rfc"</text>
+<svg width="1100" height="220" viewBox="0 0 1100 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="220" rx="18" fill="#F6F8FA"/>
+  <rect x="28" y="26" width="1044" height="168" rx="14" fill="#FFFFFF" stroke="#D0D7DE"/>
+  <text x="58" y="76" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="34" font-weight="750">Miracle778</text>
+  <text x="60" y="108" fill="#57606A" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">Open Source Ledger / Security Engineering / Agent Governance</text>
 
-  <rect x="560" y="58" width="222" height="84" rx="14" fill="#0D1117" stroke="#1F6FEB" stroke-opacity="0.55"/>
-  <text x="586" y="90" fill="#79C0FF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="700">CURRENT TRACK</text>
-  <text x="586" y="118" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="650">Agent Governance</text>
+  <line x1="60" y1="132" x2="1040" y2="132" stroke="#D8DEE4"/>
+  <text x="60" y="164" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">record.source</text>
+  <text x="184" y="164" fill="#24292F" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">issue / pr / rfc</text>
+  <text x="390" y="164" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">rule</text>
+  <text x="446" y="164" fill="#24292F" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">facts over fluff</text>
+  <text x="650" y="164" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">status</text>
+  <text x="724" y="164" fill="#24292F" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">slowly shipping</text>
 
-  <rect x="810" y="58" width="222" height="84" rx="14" fill="#0D1117" stroke="#238636" stroke-opacity="0.55"/>
-  <text x="836" y="90" fill="#7EE787" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="700">LEDGER RULE</text>
-  <text x="836" y="118" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="650">Facts over fluff</text>
-
-  <rect x="560" y="168" width="222" height="84" rx="14" fill="#0D1117" stroke="#8957E5" stroke-opacity="0.55"/>
-  <text x="586" y="200" fill="#D2A8FF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="700">LEARNING LOG</text>
-  <text x="586" y="228" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="650">AI Security</text>
-
-  <rect x="810" y="168" width="222" height="84" rx="14" fill="#0D1117" stroke="#F0883E" stroke-opacity="0.55"/>
-  <text x="836" y="200" fill="#FFA657" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="700">STATUS</text>
-  <text x="836" y="228" fill="#F0F6FC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="650">Slowly shipping</text>
+  <rect x="892" y="60" width="134" height="30" rx="15" fill="#DDF4FF" stroke="#54AEFF"/>
+  <text x="916" y="80" fill="#0969DA" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="650">Minimal</text>
+  <rect x="892" y="94" width="134" height="30" rx="15" fill="#DAFBE1" stroke="#4AC26B"/>
+  <text x="912" y="114" fill="#1A7F37" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="650">Ledger</text>
 </svg>

@@ -21,6 +21,7 @@ const query = `
           title
           url
           state
+          createdAt
           repository {
             nameWithOwner
             url
@@ -32,6 +33,7 @@ const query = `
           url
           state
           merged
+          createdAt
           repository {
             nameWithOwner
             url
@@ -91,8 +93,10 @@ const nodes = result.data.search.nodes.filter(Boolean);
 const rows = nodes.map((item) => {
   const repository = item.repository;
   const type = item.__typename === "PullRequest" ? "PR" : "Issue";
+  const date = item.createdAt.slice(0, 10);
 
   return [
+    date,
     `[${escapeCell(repository.nameWithOwner)}](${repository.url})`,
     formatStars(repository.stargazerCount),
     type,
@@ -103,11 +107,11 @@ const rows = nodes.map((item) => {
 }).map((row) => `| ${row} |`);
 
 const table = [
-  "| Repository | Stars | Type | Contribution | Status | Link |",
-  "|---|---:|---|---|---|---|",
+  "| Date | Repository | Stars | Type | Record | Status | Link |",
+  "|---|---|---:|---|---|---|---|",
   rows.length
     ? rows.join("\n")
-    : "| 暂无公开记录 | - | - | 还没有拉取到公开 Issue / PR | - | - |",
+    : "| - | 暂无公开记录 | - | - | 还没有拉取到公开 Issue / PR | - | - |",
 ].join("\n");
 
 const readme = fs.readFileSync("README.md", "utf8");

@@ -1,0 +1,31 @@
+<svg width="1100" height="360" viewBox="0 0 1100 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="360" rx="18" fill="#F6F8FA"/>
+  <rect x="28" y="26" width="1044" height="308" rx="14" fill="#FFFFFF" stroke="#D0D7DE"/>
+  <text x="56" y="70" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="750">Capability Ledger</text>
+  <text x="56" y="96" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="13">stack / capability-domain</text>
+  <line x1="56" y1="118" x2="1044" y2="118" stroke="#D8DEE4"/>
+
+  <rect x="56" y="142" width="478" height="64" rx="12" fill="#F6F8FA" stroke="#D0D7DE"/>
+  <text x="82" y="168" fill="#0969DA" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Languages</text>
+  <text x="82" y="192" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Python / Java / Go / JavaScript</text>
+
+  <rect x="566" y="142" width="478" height="64" rx="12" fill="#F6F8FA" stroke="#D0D7DE"/>
+  <text x="592" y="168" fill="#0969DA" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Backend</text>
+  <text x="592" y="192" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Spring Boot / FastAPI / REST API / Microservices</text>
+
+  <rect x="56" y="222" width="478" height="64" rx="12" fill="#F6F8FA" stroke="#D0D7DE"/>
+  <text x="82" y="248" fill="#1A7F37" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Security</text>
+  <text x="82" y="272" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">PKI / X.509 / PKCS#7 / HSM / JWT / mTLS / YARA</text>
+
+  <rect x="566" y="222" width="478" height="64" rx="12" fill="#F6F8FA" stroke="#D0D7DE"/>
+  <text x="592" y="248" fill="#1A7F37" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Supply Chain</text>
+  <text x="592" y="272" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">SBOM / SPDX / CycloneDX / Sigstore / SLSA</text>
+
+  <rect x="56" y="302" width="478" height="36" rx="12" fill="#FFFFFF" stroke="#D0D7DE"/>
+  <text x="82" y="325" fill="#8250DF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Cloud Native</text>
+  <text x="208" y="325" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Docker / Kubernetes / CI/CD / API Gateway</text>
+
+  <rect x="566" y="302" width="478" height="36" rx="12" fill="#FFFFFF" stroke="#D0D7DE"/>
+  <text x="592" y="325" fill="#8250DF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Tools</text>
+  <text x="656" y="325" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Git / Linux / Pytest / Mockito / BurpSuite</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg width="1100" height="360" viewBox="0 0 1100 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="360" rx="18" fill="#F6F8FA"/>
+  <rect x="28" y="26" width="1044" height="308" rx="14" fill="#FFFFFF" stroke="#D0D7DE"/>
+  <text x="56" y="70" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="750">Ledger Index</text>
+  <text x="56" y="96" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="13">track / notes / evidence-to-collect</text>
+  <line x1="56" y1="118" x2="1044" y2="118" stroke="#D8DEE4"/>
+
+  <text x="64" y="150" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="13">TRACK</text>
+  <text x="315" y="150" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="13">CURRENT NOTES</text>
+  <text x="770" y="150" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="13">PROOF</text>
+  <line x1="56" y1="166" x2="1044" y2="166" stroke="#EAEEF2"/>
+
+  <text x="64" y="198" fill="#0969DA" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Agent Governance</text>
+  <text x="315" y="198" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">身份、权限边界、治理中间件、策略拦截</text>
+  <text x="770" y="198" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Issue / RFC / Design discussion</text>
+
+  <text x="64" y="238" fill="#1A7F37" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">AI Security</text>
+  <text x="315" y="238" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">OWASP LLM / Agent 风险、PII 检测、Tool Calling 审计</text>
+  <text x="770" y="238" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Issue / PR / Example</text>
+
+  <text x="64" y="278" fill="#8250DF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Trust Infrastructure</text>
+  <text x="315" y="278" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Sigstore、SLSA、透明日志、AI 资产签名与验签</text>
+  <text x="770" y="278" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Notes / PoC / RFC</text>
+
+  <text x="64" y="318" fill="#BF8700" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Cloud Native Security</text>
+  <text x="315" y="318" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">DevSecOps、软件供应链安全、CVE 分析</text>
+  <text x="770" y="318" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Issue / PR / Tooling</text>
+</svg>
