@@ -2,18 +2,18 @@
   <rect width="1100" height="220" rx="18" fill="#F6F8FA"/>
   <rect x="28" y="26" width="1044" height="168" rx="14" fill="#FFFFFF" stroke="#D0D7DE"/>
   <text x="58" y="76" fill="#24292F" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="34" font-weight="750">Miracle778</text>
-  <text x="60" y="108" fill="#57606A" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">Open Source Ledger / Security Engineering / Agent Governance</text>
+  <text x="60" y="108" fill="#57606A" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">Security Dev / Agent Apps / AI Governance</text>
 
   <line x1="60" y1="132" x2="1040" y2="132" stroke="#D8DEE4"/>
-  <text x="60" y="164" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">record.source</text>
-  <text x="184" y="164" fill="#24292F" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">issue / pr / rfc</text>
-  <text x="390" y="164" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">rule</text>
-  <text x="446" y="164" fill="#24292F" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">facts over fluff</text>
-  <text x="650" y="164" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">status</text>
-  <text x="724" y="164" fill="#24292F" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">slowly shipping</text>
+  <text x="60" y="164" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">base</text>
+  <text x="114" y="164" fill="#24292F" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">2020 hdu infosec</text>
+  <text x="330" y="164" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">now</text>
+  <text x="382" y="164" fill="#24292F" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">security engineering</text>
+  <text x="650" y="164" fill="#57606A" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">next</text>
+  <text x="706" y="164" fill="#24292F" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="14">agent governance</text>
 
   <rect x="892" y="60" width="134" height="30" rx="15" fill="#DDF4FF" stroke="#54AEFF"/>
-  <text x="916" y="80" fill="#0969DA" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="650">Minimal</text>
+  <text x="910" y="80" fill="#0969DA" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="650">Security</text>
   <rect x="892" y="94" width="134" height="30" rx="15" fill="#DAFBE1" stroke="#4AC26B"/>
-  <text x="912" y="114" fill="#1A7F37" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="650">Ledger</text>
+  <text x="922" y="114" fill="#1A7F37" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="650">AI</text>
 </svg>
