@@ -32,6 +32,8 @@
 | 2026-05-31 | [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 51.2k | Issue | [[BUG] 知乎 detail 模式未使用 --specified_id，且现有 Chrome CDP 连接在新版 Chrome 下可能 404](https://github.com/NanmiCoder/MediaCrawler/issues/908) | Open | [View](https://github.com/NanmiCoder/MediaCrawler/issues/908) |
 | 2025-01-14 | [oshi/oshi](https://github.com/oshi/oshi) | 5.2k | Issue | [Memory speed unit "MT/s" not support parse](https://github.com/oshi/oshi/issues/2792) | Closed | [View](https://github.com/oshi/oshi/issues/2792) |
 | 2023-03-15 | [bcgit/bc-java](https://github.com/bcgit/bc-java) | 2.7k | Issue | [When the ContentType is 1.2.156.10197.6.1.4.2.2 (SM2SignedData), can I get a certificate by the generateCertificates function?](https://github.com/bcgit/bc-java/issues/1355) | Closed | [View](https://github.com/bcgit/bc-java/issues/1355) |
+
+[View all PRs](https://github.com/pulls?q=author%3AMiracle778) · [View all Issues](https://github.com/issues?q=author%3AMiracle778)
 <!-- CONTRIBUTIONS:END -->
 
 ---

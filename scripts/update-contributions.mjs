@@ -114,10 +114,15 @@ const table = [
     : "| - | 暂无公开记录 | - | - | 还没有拉取到公开 Issue / PR | - | - |",
 ].join("\n");
 
+const links = [
+  "",
+  `[View all PRs](https://github.com/pulls?q=author%3A${username}) · [View all Issues](https://github.com/issues?q=author%3A${username})`,
+].join("\n");
+
 const readme = fs.readFileSync("README.md", "utf8");
 const next = readme.replace(
   /<!-- CONTRIBUTIONS:START -->[\s\S]*?<!-- CONTRIBUTIONS:END -->/,
-  `<!-- CONTRIBUTIONS:START -->\n${table}\n<!-- CONTRIBUTIONS:END -->`,
+  `<!-- CONTRIBUTIONS:START -->\n${table}\n${links}\n<!-- CONTRIBUTIONS:END -->`,
 );
 
 fs.writeFileSync("README.md", next);
