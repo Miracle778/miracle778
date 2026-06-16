@@ -29,9 +29,9 @@
 ## Open Source Activity
 
 <!-- CONTRIBUTIONS:START -->
-| Date | Repository | Stars | Type | Record | Status | Link |
-|---|---|---:|---|---|---|---|
-| - | Action 尚未运行 | - | - | 等待 GitHub Actions 自动拉取真实 Issue / PR 记录 | - | - |
+| Date | Repository | Stars | Type | Record | Discuss | Status | Signal |
+|---|---|---:|---|---|---:|---|---|
+| - | Action 尚未运行 | - | - | 等待 GitHub Actions 自动拉取真实 Issue / PR 记录 | - | - | - |
 <!-- CONTRIBUTIONS:END -->
 
 ---
