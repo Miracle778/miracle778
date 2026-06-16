@@ -26,7 +26,7 @@
 <!-- CONTRIBUTIONS:START -->
 | Date | Repository | Stars | Type | Record | Status | Link |
 |---|---|---:|---|---|---|---|
-| 2026-06-14 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.3k | PR | [feat(examples): add DeerFlow governed example with AGT policy and audit integration](https://github.com/microsoft/agent-governance-toolkit/pull/3020) | Open | [View](https://github.com/microsoft/agent-governance-toolkit/pull/3020) |
+| 2026-06-14 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.3k | PR | [feat(examples): add DeerFlow governed example with AGT policy and audit integration](https://github.com/microsoft/agent-governance-toolkit/pull/3020) | Merged | [View](https://github.com/microsoft/agent-governance-toolkit/pull/3020) |
 | 2026-06-02 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.3k | PR | [fix: record denied MCP example tool calls](https://github.com/microsoft/agent-governance-toolkit/pull/2774) | Merged | [View](https://github.com/microsoft/agent-governance-toolkit/pull/2774) |
 | 2026-05-31 | [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 51.2k | PR | [fix: 修复知乎 specified_id 和已有 Chrome CDP 连接问题](https://github.com/NanmiCoder/MediaCrawler/pull/909) | Open | [View](https://github.com/NanmiCoder/MediaCrawler/pull/909) |
 | 2026-05-31 | [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 51.2k | Issue | [[BUG] 知乎 detail 模式未使用 --specified_id，且现有 Chrome CDP 连接在新版 Chrome 下可能 404](https://github.com/NanmiCoder/MediaCrawler/issues/908) | Open | [View](https://github.com/NanmiCoder/MediaCrawler/issues/908) |
