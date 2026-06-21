@@ -25,7 +25,7 @@ test("buildContributionsTable removes Link column and adds Discuss and Signal", 
         stargazerCount: 1234,
       },
     },
-  ], username);
+  ], username, 8);
 
   assert.match(table, /\| Date \| Repository \| Stars \| Type \| Record \| Discuss \| Status \| Signal \|/);
   assert.doesNotMatch(table, /\| Link \|/);
@@ -71,7 +71,7 @@ test("buildContributionsTable hides issues that were self fixed", () => {
         stargazerCount: 100,
       },
     },
-  ], username);
+  ], username, 8);
 
   assert.match(table, /fix bug from my issue/);
   assert.doesNotMatch(table, /bug I later fixed/);

@@ -146,8 +146,8 @@ function shouldShowContribution(item, username) {
   return !(item.__typename === "Issue" && signalOf(item, username) === "Self fixed");
 }
 
-export function buildContributionsTable(nodes, username) {
-  const rows = nodes.filter(Boolean).filter((item) => shouldShowContribution(item, username)).map((item) => {
+export function buildContributionsTable(nodes, username, limit) {
+  const rows = nodes.filter(Boolean).filter((item) => shouldShowContribution(item, username)).slice(0, limit).map((item) => {
   const repository = item.repository;
   const type = item.__typename === "PullRequest" ? "PR" : "Issue";
   const date = item.createdAt.slice(0, 10);
@@ -192,7 +192,7 @@ async function main() {
       query,
       variables: {
         query: `author:${username} archived:false sort:created-desc`,
-        limit,
+        limit: limit * 3,
       },
     }),
   });
@@ -207,7 +207,7 @@ async function main() {
     throw new Error(JSON.stringify(result.errors, null, 2));
   }
 
-  const table = buildContributionsTable(result.data.search.nodes, username);
+  const table = buildContributionsTable(result.data.search.nodes, username, limit);
   const links = [
     "",
     `[View all PRs](https://github.com/pulls?q=author%3A${username}) · [View all Issues](https://github.com/issues?q=author%3A${username})`,
