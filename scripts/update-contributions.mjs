@@ -50,6 +50,7 @@ const query = `
           state
           merged
           createdAt
+          totalCommentsCount
           comments {
             totalCount
           }
@@ -133,6 +134,14 @@ export function signalOf(item, username) {
   return closeActor ? "Closed by maintainer" : "Closed";
 }
 
+function discussionCountOf(item) {
+  if (item.__typename === "PullRequest") {
+    return item.totalCommentsCount ?? item.comments?.totalCount ?? 0;
+  }
+
+  return item.comments?.totalCount ?? 0;
+}
+
 export function buildContributionsTable(nodes, username) {
   const rows = nodes.filter(Boolean).map((item) => {
   const repository = item.repository;
@@ -145,7 +154,7 @@ export function buildContributionsTable(nodes, username) {
     formatStars(repository.stargazerCount),
     type,
     `[${escapeCell(item.title)}](${item.url})`,
-    item.comments?.totalCount ?? 0,
+    discussionCountOf(item),
     statusOf(item),
     signalOf(item, username),
   ].join(" | ");

@@ -26,10 +26,10 @@
 <!-- CONTRIBUTIONS:START -->
 | Date | Repository | Stars | Type | Record | Discuss | Status | Signal |
 |---|---|---:|---|---|---:|---|---|
-| 2026-06-20 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 72.1k | PR | [feat(guardrails): expose authenticated runtime context in GuardrailRequest](https://github.com/bytedance/deer-flow/pull/3665) | 2 | Open | In review |
+| 2026-06-20 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 72.1k | PR | [feat(guardrails): expose authenticated runtime context in GuardrailRequest](https://github.com/bytedance/deer-flow/pull/3665) | 9 | Open | In review |
 | 2026-06-20 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 72.1k | Issue | [[feat] 为 GuardrailRequest 补充用户身份与运行时归因字段](https://github.com/bytedance/deer-flow/issues/3664) | 0 | Open | Open |
 | 2026-06-14 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.4k | PR | [feat(examples): add DeerFlow governed example with AGT policy and audit integration](https://github.com/microsoft/agent-governance-toolkit/pull/3020) | 7 | Merged | Accepted |
-| 2026-06-02 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.4k | PR | [fix: record denied MCP example tool calls](https://github.com/microsoft/agent-governance-toolkit/pull/2774) | 3 | Merged | Accepted |
+| 2026-06-02 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.4k | PR | [fix: record denied MCP example tool calls](https://github.com/microsoft/agent-governance-toolkit/pull/2774) | 5 | Merged | Accepted |
 | 2026-05-31 | [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 51.5k | PR | [fix: 修复知乎 specified_id 和已有 Chrome CDP 连接问题](https://github.com/NanmiCoder/MediaCrawler/pull/909) | 0 | Merged | Accepted |
 | 2026-05-31 | [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 51.5k | Issue | [[BUG] 知乎 detail 模式未使用 --specified_id，且现有 Chrome CDP 连接在新版 Chrome 下可能 404](https://github.com/NanmiCoder/MediaCrawler/issues/908) | 0 | Closed | Self fixed |
 | 2025-01-14 | [oshi/oshi](https://github.com/oshi/oshi) | 5.2k | Issue | [Memory speed unit "MT/s" not support parse](https://github.com/oshi/oshi/issues/2792) | 5 | Closed | Fixed by PR #2796 |

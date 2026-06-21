@@ -17,7 +17,8 @@ test("buildContributionsTable removes Link column and adds Discuss and Signal", 
       state: "MERGED",
       merged: true,
       createdAt: "2026-01-02T00:00:00Z",
-      comments: { totalCount: 3 },
+      comments: { totalCount: 2 },
+      totalCommentsCount: 9,
       repository: {
         nameWithOwner: "o/r",
         url: "https://github.com/o/r",
@@ -28,7 +29,7 @@ test("buildContributionsTable removes Link column and adds Discuss and Signal", 
 
   assert.match(table, /\| Date \| Repository \| Stars \| Type \| Record \| Discuss \| Status \| Signal \|/);
   assert.doesNotMatch(table, /\| Link \|/);
-  assert.match(table, /\| 2026-01-02 \| \[o\/r\]\(https:\/\/github.com\/o\/r\) \| 1\.2k \| PR \| \[fix parser\]\(https:\/\/github.com\/o\/r\/pull\/1\) \| 3 \| Merged \| Accepted \|/);
+  assert.match(table, /\| 2026-01-02 \| \[o\/r\]\(https:\/\/github.com\/o\/r\) \| 1\.2k \| PR \| \[fix parser\]\(https:\/\/github.com\/o\/r\/pull\/1\) \| 9 \| Merged \| Accepted \|/);
 });
 
 test("signalOf summarizes issue closure reason and closing PR ownership", () => {
