@@ -1,0 +1,26 @@
+profile:
+  username: "Miracle778"
+
+display:
+  title: "Open Source Activity"
+  max_projects: 5
+  max_items_per_project: 3
+  lookback_days: null
+
+filters:
+  exclude_repos: []
+  include_types:
+    - "PR"
+    - "Issue"
+
+featured_repos:
+  - "bytedance/deer-flow"
+  - "microsoft/agent-governance-toolkit"
+  - "NanmiCoder/MediaCrawler"
+  - "bcgit/bc-java"
+
+overrides:
+  "https://github.com/bcgit/bc-java/issues/1355":
+    status: "fixed"
+    title: "SM2SignedData certificate parsing discussion"
+    featured: true
