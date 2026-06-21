@@ -112,6 +112,7 @@ def build_project_groups(
             "featured_repo": repo in featured_set,
             "has_featured_item": any(item.get("featured") for item in items),
             "max_status_weight": max(status_weight(item.get("status")) for item in items),
+            "timeline_date": activity_month(sorted_items[0]),
             "latest_updated_at": max(item.get("updated_at") or item.get("created_at") or "" for item in items),
             "items": sorted_items,
             "stats": build_stats(items),
@@ -144,6 +145,14 @@ def select_projects(
 
 def title_case_status(status: str | None) -> str:
     return str(status or "unknown").replace("_", " ").title()
+
+
+def activity_month(activity: dict[str, Any]) -> str:
+    if activity.get("date"):
+        return str(activity["date"])[:7]
+    if activity.get("created_at"):
+        return str(activity["created_at"])[:7]
+    return str(activity.get("updated_at") or "")[:7]
 
 
 def stats_lines(stats: dict[str, Any]) -> list[str]:
@@ -209,7 +218,7 @@ def render_svg(projects: list[dict[str, Any]], title: str, theme: str) -> str:
     for index, project in enumerate(projects):
         y = 116 + index * row_height
         dot_y = y + 46
-        latest_date = (project.get("latest_updated_at") or "")[:7]
+        latest_date = (project.get("timeline_date") or "")[:7]
         output.extend([
             svg_text(56, dot_y + 6, latest_date, 18, colors["muted"], "600"),
             f'<circle cx="154" cy="{dot_y}" r="9" fill="{colors["accent"]}"/>',

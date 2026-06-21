@@ -296,6 +296,24 @@ class RenderOpenSourceSignalsTests(unittest.TestCase):
         self.assertNotIn("<script", svg)
         self.assertNotIn("foreignObject", svg)
 
+    def test_render_svg_uses_created_month_for_timeline_date(self):
+        groups = build_project_groups([{
+            "repo": "o/r",
+            "type": "Issue",
+            "status": "fixed",
+            "title": "Old issue fixed later",
+            "url": "https://github.com/o/r/issues/1",
+            "date": "2025-01",
+            "created_at": "2025-01-14T00:00:00Z",
+            "updated_at": "2026-06-21T00:00:00Z",
+            "featured": False,
+        }], featured_repos=[])
+        selected = select_projects(groups, max_projects=5, max_items_per_project=3)
+        svg = render_svg(selected, title="Open Source Activity", theme="dark")
+
+        self.assertIn("2025-01", svg)
+        self.assertNotIn("2026-06", svg)
+
 
 if __name__ == "__main__":
     unittest.main()
