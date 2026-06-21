@@ -15,6 +15,12 @@ from scripts.fetch_github_activity import (
     is_maintainer_comment,
     normalize_search_item,
 )
+from scripts.render_open_source_signals import (
+    build_project_groups,
+    render_svg,
+    select_projects,
+    truncate_text,
+)
 
 
 class FetchGithubActivityTests(unittest.TestCase):
@@ -235,6 +241,60 @@ class FakeGitHubClient(GitHubClient):
         if "/search/issues" in url:
             return {"items": page_items}
         return page_items
+
+
+class RenderOpenSourceSignalsTests(unittest.TestCase):
+    def test_truncate_text_adds_ellipsis(self):
+        self.assertEqual(truncate_text("abcdef", 4), "abc…")
+        self.assertEqual(truncate_text("abc", 4), "abc")
+
+    def test_build_project_groups_groups_by_repo_and_counts_all_items(self):
+        activities = [
+            {"repo": "o/r", "type": "PR", "status": "merged", "title": "A", "updated_at": "2026-06-03T00:00:00Z", "featured": False},
+            {"repo": "o/r", "type": "Issue", "status": "replied", "title": "B", "updated_at": "2026-06-02T00:00:00Z", "featured": False},
+            {"repo": "x/y", "type": "Issue", "status": "open", "title": "C", "updated_at": "2026-06-01T00:00:00Z", "featured": False},
+        ]
+        groups = build_project_groups(activities, featured_repos=[])
+        self.assertEqual(groups[0]["repo"], "o/r")
+        self.assertEqual(groups[0]["stats"]["total"], 2)
+        self.assertEqual(groups[0]["stats"]["types"]["PR"], 1)
+        self.assertEqual(groups[0]["stats"]["types"]["Issue"], 1)
+
+    def test_select_projects_limits_projects_and_items(self):
+        activities = []
+        for index in range(6):
+            for item_index in range(4):
+                activities.append({
+                    "repo": f"o/r{index}",
+                    "type": "PR",
+                    "status": "open",
+                    "title": f"Item {item_index}",
+                    "url": f"https://github.com/o/r{index}/pull/{item_index}",
+                    "updated_at": f"2026-06-{10 - index:02d}T00:00:00Z",
+                    "date": "2026-06",
+                    "featured": False,
+                })
+        groups = build_project_groups(activities, featured_repos=[])
+        selected = select_projects(groups, max_projects=5, max_items_per_project=3)
+        self.assertEqual(len(selected), 5)
+        self.assertTrue(all(len(group["items"]) == 3 for group in selected))
+
+    def test_featured_repo_is_sort_boost_not_filter(self):
+        activities = [
+            {"repo": "new/repo", "type": "PR", "status": "merged", "title": "New", "url": "https://github.com/new/repo/pull/1", "updated_at": "2026-06-21T00:00:00Z", "date": "2026-06", "featured": False},
+            {"repo": "featured/repo", "type": "Issue", "status": "open", "title": "Old", "url": "https://github.com/featured/repo/issues/1", "updated_at": "2025-01-01T00:00:00Z", "date": "2025-01", "featured": False},
+        ]
+        groups = build_project_groups(activities, featured_repos=["featured/repo"])
+        repos = [group["repo"] for group in select_projects(groups, max_projects=5, max_items_per_project=3)]
+        self.assertIn("new/repo", repos)
+        self.assertEqual(repos[0], "featured/repo")
+
+    def test_render_svg_has_title_and_no_forbidden_elements(self):
+        svg = render_svg([], title="Open Source Activity", theme="dark")
+        self.assertIn("Open Source Activity", svg)
+        self.assertIn("No open source activity found yet.", svg)
+        self.assertNotIn("<script", svg)
+        self.assertNotIn("foreignObject", svg)
 
 
 if __name__ == "__main__":
