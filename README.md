@@ -23,6 +23,15 @@
 
 ## Open Source Activity
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/open-source-signals-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/open-source-signals-light.svg">
+  <img src="./assets/open-source-signals-dark.svg" width="100%" alt="Open Source Activity">
+</picture>
+
+<details>
+<summary>Full contribution log</summary>
+
 <!-- CONTRIBUTIONS:START -->
 | Date | Repository | Stars | Type | Record | Discuss | Status | Signal |
 |---|---|---:|---|---|---:|---|---|
@@ -37,6 +46,8 @@
 
 [View all PRs](https://github.com/pulls?q=author%3AMiracle778) · [View all Issues](https://github.com/issues?q=author%3AMiracle778)
 <!-- CONTRIBUTIONS:END -->
+
+</details>
 
 ---
 
