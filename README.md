@@ -29,11 +29,9 @@
 | 2026-06-21 | [agentrust-io/agent-manifest](https://github.com/agentrust-io/agent-manifest) | 3 | PR | [feat(cli): allow CLI verify to accept a trusted public key](https://github.com/agentrust-io/agent-manifest/pull/183) | 0 | Open | In review |
 | 2026-06-21 | [agentrust-io/agent-manifest](https://github.com/agentrust-io/agent-manifest) | 3 | Issue | [[cli] CLI verify cannot validate signed manifests with generated public key](https://github.com/agentrust-io/agent-manifest/issues/182) | 0 | Open | Open |
 | 2026-06-20 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 72.2k | PR | [feat(guardrails): expose authenticated runtime context in GuardrailRequest](https://github.com/bytedance/deer-flow/pull/3665) | 9 | Merged | Accepted |
-| 2026-06-20 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 72.2k | Issue | [[feat] 为 GuardrailRequest 补充用户身份与运行时归因字段](https://github.com/bytedance/deer-flow/issues/3664) | 0 | Closed | Self fixed |
 | 2026-06-14 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.4k | PR | [feat(examples): add DeerFlow governed example with AGT policy and audit integration](https://github.com/microsoft/agent-governance-toolkit/pull/3020) | 7 | Merged | Accepted |
 | 2026-06-02 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.4k | PR | [fix: record denied MCP example tool calls](https://github.com/microsoft/agent-governance-toolkit/pull/2774) | 5 | Merged | Accepted |
 | 2026-05-31 | [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 51.6k | PR | [fix: 修复知乎 specified_id 和已有 Chrome CDP 连接问题](https://github.com/NanmiCoder/MediaCrawler/pull/909) | 0 | Merged | Accepted |
-| 2026-05-31 | [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 51.6k | Issue | [[BUG] 知乎 detail 模式未使用 --specified_id，且现有 Chrome CDP 连接在新版 Chrome 下可能 404](https://github.com/NanmiCoder/MediaCrawler/issues/908) | 0 | Closed | Self fixed |
 
 [View all PRs](https://github.com/pulls?q=author%3AMiracle778) · [View all Issues](https://github.com/issues?q=author%3AMiracle778)
 <!-- CONTRIBUTIONS:END -->
