@@ -32,6 +32,8 @@
 | 2026-06-14 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.4k | PR | [feat(examples): add DeerFlow governed example with AGT policy and audit integration](https://github.com/microsoft/agent-governance-toolkit/pull/3020) | 7 | Merged | Accepted |
 | 2026-06-02 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.4k | PR | [fix: record denied MCP example tool calls](https://github.com/microsoft/agent-governance-toolkit/pull/2774) | 5 | Merged | Accepted |
 | 2026-05-31 | [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 51.6k | PR | [fix: 修复知乎 specified_id 和已有 Chrome CDP 连接问题](https://github.com/NanmiCoder/MediaCrawler/pull/909) | 0 | Merged | Accepted |
+| 2025-01-14 | [oshi/oshi](https://github.com/oshi/oshi) | 5.2k | Issue | [Memory speed unit "MT/s" not support parse](https://github.com/oshi/oshi/issues/2792) | 5 | Closed | Fixed by PR #2796 |
+| 2023-03-15 | [bcgit/bc-java](https://github.com/bcgit/bc-java) | 2.7k | Issue | [When the ContentType is 1.2.156.10197.6.1.4.2.2 (SM2SignedData), can I get a certificate by the generateCertificates function?](https://github.com/bcgit/bc-java/issues/1355) | 1 | Closed | Completed by maintainer |
 
 [View all PRs](https://github.com/pulls?q=author%3AMiracle778) · [View all Issues](https://github.com/issues?q=author%3AMiracle778)
 <!-- CONTRIBUTIONS:END -->
