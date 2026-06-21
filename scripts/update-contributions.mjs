@@ -142,8 +142,12 @@ function discussionCountOf(item) {
   return item.comments?.totalCount ?? 0;
 }
 
+function shouldShowContribution(item, username) {
+  return !(item.__typename === "Issue" && signalOf(item, username) === "Self fixed");
+}
+
 export function buildContributionsTable(nodes, username) {
-  const rows = nodes.filter(Boolean).map((item) => {
+  const rows = nodes.filter(Boolean).filter((item) => shouldShowContribution(item, username)).map((item) => {
   const repository = item.repository;
   const type = item.__typename === "PullRequest" ? "PR" : "Issue";
   const date = item.createdAt.slice(0, 10);

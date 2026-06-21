@@ -32,6 +32,52 @@ test("buildContributionsTable removes Link column and adds Discuss and Signal", 
   assert.match(table, /\| 2026-01-02 \| \[o\/r\]\(https:\/\/github.com\/o\/r\) \| 1\.2k \| PR \| \[fix parser\]\(https:\/\/github.com\/o\/r\/pull\/1\) \| 9 \| Merged \| Accepted \|/);
 });
 
+test("buildContributionsTable hides issues that were self fixed", () => {
+  const table = buildContributionsTable([
+    {
+      __typename: "PullRequest",
+      title: "fix bug from my issue",
+      url: "https://github.com/o/r/pull/10",
+      state: "MERGED",
+      merged: true,
+      createdAt: "2026-01-03T00:00:00Z",
+      comments: { totalCount: 1 },
+      totalCommentsCount: 1,
+      repository: {
+        nameWithOwner: "o/r",
+        url: "https://github.com/o/r",
+        stargazerCount: 100,
+      },
+    },
+    {
+      __typename: "Issue",
+      title: "bug I later fixed",
+      url: "https://github.com/o/r/issues/9",
+      state: "CLOSED",
+      stateReason: "COMPLETED",
+      createdAt: "2026-01-02T00:00:00Z",
+      comments: { totalCount: 0 },
+      closedByPullRequestsReferences: {
+        nodes: [{
+          number: 10,
+          url: "https://github.com/o/r/pull/10",
+          author: { login: username },
+        }],
+      },
+      timelineItems: { nodes: [] },
+      repository: {
+        nameWithOwner: "o/r",
+        url: "https://github.com/o/r",
+        stargazerCount: 100,
+      },
+    },
+  ], username);
+
+  assert.match(table, /fix bug from my issue/);
+  assert.doesNotMatch(table, /bug I later fixed/);
+  assert.doesNotMatch(table, /Self fixed/);
+});
+
 test("signalOf summarizes issue closure reason and closing PR ownership", () => {
   assert.equal(signalOf({
     __typename: "Issue",
