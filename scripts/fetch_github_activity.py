@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import os
 import sys
+import time
 from copy import deepcopy
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
@@ -176,7 +177,19 @@ class GitHubClient:
         })
 
     def get(self, url: str, params: dict[str, Any] | None = None) -> Any:
-        response = self.session.get(url, params=params, timeout=30)
+        last_error = None
+        for attempt in range(3):
+            try:
+                response = self.session.get(url, params=params, timeout=30)
+                break
+            except requests.RequestException as error:
+                last_error = error
+                if attempt == 2:
+                    raise RuntimeError(f"GitHub API request failed before response: {error}") from error
+                time.sleep(1 + attempt)
+        else:
+            raise RuntimeError(f"GitHub API request failed before response: {last_error}")
+
         if response.status_code == 403 and response.headers.get("X-RateLimit-Remaining") == "0":
             reset = response.headers.get("X-RateLimit-Reset", "unknown")
             raise RuntimeError(f"GitHub API rate limit exceeded; reset={reset}")
