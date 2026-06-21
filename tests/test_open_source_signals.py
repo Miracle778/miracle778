@@ -11,12 +11,14 @@ from scripts.fetch_github_activity import (
     apply_overrides,
     build_generated_payload,
     build_search_query,
+    fetch_activity,
     infer_status,
     is_maintainer_comment,
     normalize_search_item,
 )
 from scripts.render_open_source_signals import (
     build_project_groups,
+    format_stars,
     render_svg,
     select_projects,
     truncate_text,
@@ -159,6 +161,7 @@ class FetchGithubActivityTests(unittest.TestCase):
         self.assertEqual(normalized["type"], "PR")
         self.assertEqual(normalized["date"], "2026-06")
         self.assertEqual(normalized["state"], "open")
+        self.assertIsNone(normalized["repo_stars"])
 
     def test_generated_payload_wraps_activities_with_metadata(self):
         activities = [{"url": "https://github.com/o/r/issues/1"}]
@@ -228,6 +231,20 @@ class FetchGithubActivityTests(unittest.TestCase):
         }]
         self.assertFalse(_is_self_fixed_issue(activity, timeline_events, "Miracle778"))
 
+    def test_fetch_activity_caches_repo_stars_per_repo(self):
+        client = FakeActivityClient()
+        activities = fetch_activity({
+            "profile": {"username": "Miracle778"},
+            "display": {"lookback_days": None},
+            "filters": {"include_types": ["PR"], "exclude_repos": []},
+            "featured_repos": [],
+            "overrides": {},
+        }, client)
+
+        self.assertEqual(len(activities), 2)
+        self.assertEqual([activity["repo_stars"] for activity in activities], [4400, 4400])
+        self.assertEqual(client.repo_detail_calls, 1)
+
 
 class FakeGitHubClient(GitHubClient):
     def __init__(self, pages):
@@ -243,10 +260,54 @@ class FakeGitHubClient(GitHubClient):
         return page_items
 
 
+class FakeActivityClient:
+    def __init__(self):
+        self.repo_detail_calls = 0
+
+    def get_all_pages(self, url, params=None):
+        if url == f"{GITHUB_API}/search/issues":
+            return [
+                self._item(1, "First PR"),
+                self._item(2, "Second PR"),
+            ]
+        if url.endswith("/comments") or url.endswith("/timeline"):
+            return []
+        return []
+
+    def get(self, url, params=None):
+        if url == f"{GITHUB_API}/repos/o/r":
+            self.repo_detail_calls += 1
+            return {"stargazers_count": 4400}
+        if url.endswith("/pulls/1") or url.endswith("/pulls/2"):
+            return {"merged_at": None}
+        return {}
+
+    def _item(self, number, title):
+        return {
+            "html_url": f"https://github.com/o/r/pull/{number}",
+            "repository_url": f"{GITHUB_API}/repos/o/r",
+            "title": title,
+            "number": number,
+            "state": "open",
+            "created_at": "2026-06-01T00:00:00Z",
+            "updated_at": "2026-06-02T00:00:00Z",
+            "closed_at": None,
+            "comments_url": f"{GITHUB_API}/repos/o/r/issues/{number}/comments",
+            "timeline_url": f"{GITHUB_API}/repos/o/r/issues/{number}/timeline",
+            "pull_request": {"url": f"{GITHUB_API}/repos/o/r/pulls/{number}"},
+        }
+
+
 class RenderOpenSourceSignalsTests(unittest.TestCase):
     def test_truncate_text_adds_ellipsis(self):
         self.assertEqual(truncate_text("abcdef", 4), "abc…")
         self.assertEqual(truncate_text("abc", 4), "abc")
+
+    def test_format_stars(self):
+        self.assertEqual(format_stars(None), "")
+        self.assertEqual(format_stars(999), "999")
+        self.assertEqual(format_stars(1234), "1.2k")
+        self.assertEqual(format_stars(72200), "72.2k")
 
     def test_build_project_groups_groups_by_repo_and_counts_all_items(self):
         activities = [
@@ -288,6 +349,34 @@ class RenderOpenSourceSignalsTests(unittest.TestCase):
         repos = [group["repo"] for group in select_projects(groups, max_projects=5, max_items_per_project=3)]
         self.assertIn("new/repo", repos)
         self.assertEqual(repos[0], "featured/repo")
+
+    def test_featured_repos_follow_yaml_order(self):
+        activities = [
+            {"repo": "repo/b", "type": "PR", "status": "merged", "title": "Newer", "url": "https://github.com/repo/b/pull/1", "updated_at": "2026-06-21T00:00:00Z", "date": "2026-06", "featured": False},
+            {"repo": "repo/a", "type": "Issue", "status": "open", "title": "Older", "url": "https://github.com/repo/a/issues/1", "updated_at": "2025-01-01T00:00:00Z", "date": "2025-01", "featured": False},
+            {"repo": "new/repo", "type": "PR", "status": "merged", "title": "Outside", "url": "https://github.com/new/repo/pull/1", "updated_at": "2026-06-22T00:00:00Z", "date": "2026-06", "featured": False},
+        ]
+        groups = build_project_groups(activities, featured_repos=["repo/a", "repo/b"])
+        repos = [group["repo"] for group in select_projects(groups, max_projects=5, max_items_per_project=3)]
+
+        self.assertEqual(repos, ["repo/a", "repo/b", "new/repo"])
+
+    def test_render_svg_shows_repo_stars_in_project_title(self):
+        groups = build_project_groups([{
+            "repo": "o/r",
+            "repo_stars": 4400,
+            "type": "PR",
+            "status": "merged",
+            "title": "Add feature",
+            "url": "https://github.com/o/r/pull/1",
+            "date": "2026-06",
+            "created_at": "2026-06-01T00:00:00Z",
+            "updated_at": "2026-06-02T00:00:00Z",
+            "featured": False,
+        }], featured_repos=[])
+        svg = render_svg(select_projects(groups, 5, 3), title="Open Source Activity", theme="dark")
+
+        self.assertIn("o/r · 4.4k", svg)
 
     def test_render_svg_has_title_and_no_forbidden_elements(self):
         svg = render_svg([], title="Open Source Activity", theme="dark")

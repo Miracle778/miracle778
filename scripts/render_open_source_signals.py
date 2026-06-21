@@ -95,7 +95,7 @@ def build_project_groups(
     for activity in activities:
         grouped[activity.get("repo") or "unknown/repo"].append(activity)
 
-    featured_set = set(featured_repos or [])
+    featured_rank = {repo: index for index, repo in enumerate(featured_repos or [])}
     projects = []
     for repo, items in grouped.items():
         sorted_items = sorted(
@@ -109,25 +109,31 @@ def build_project_groups(
         )
         projects.append({
             "repo": repo,
-            "featured_repo": repo in featured_set,
+            "featured_rank": featured_rank.get(repo),
+            "featured_repo": repo in featured_rank,
             "has_featured_item": any(item.get("featured") for item in items),
             "max_status_weight": max(status_weight(item.get("status")) for item in items),
             "timeline_date": activity_month(sorted_items[0]),
             "latest_updated_at": max(item.get("updated_at") or item.get("created_at") or "" for item in items),
+            "repo_stars": first_repo_stars(items),
             "items": sorted_items,
             "stats": build_stats(items),
         })
 
-    return sorted(
-        projects,
+    featured_projects = sorted(
+        (project for project in projects if project["featured_rank"] is not None),
+        key=lambda project: project["featured_rank"],
+    )
+    other_projects = sorted(
+        (project for project in projects if project["featured_rank"] is None),
         key=lambda project: (
-            project["featured_repo"],
             project["has_featured_item"],
             project["max_status_weight"],
             project["latest_updated_at"],
         ),
         reverse=True,
     )
+    return featured_projects + other_projects
 
 
 def select_projects(
@@ -153,6 +159,28 @@ def activity_month(activity: dict[str, Any]) -> str:
     if activity.get("created_at"):
         return str(activity["created_at"])[:7]
     return str(activity.get("updated_at") or "")[:7]
+
+
+def first_repo_stars(items: list[dict[str, Any]]) -> int | None:
+    for item in items:
+        if item.get("repo_stars") is not None:
+            return item["repo_stars"]
+    return None
+
+
+def format_stars(count: int | None) -> str:
+    if count is None:
+        return ""
+    if count >= 1000:
+        return f"{count / 1000:.1f}k"
+    return str(count)
+
+
+def project_title(project: dict[str, Any]) -> str:
+    stars = format_stars(project.get("repo_stars"))
+    if not stars:
+        return project["repo"]
+    return f"{project['repo']} · {stars}"
 
 
 def stats_lines(stats: dict[str, Any]) -> list[str]:
@@ -224,7 +252,7 @@ def render_svg(projects: list[dict[str, Any]], title: str, theme: str) -> str:
             f'<circle cx="154" cy="{dot_y}" r="9" fill="{colors["accent"]}"/>',
             f'<rect x="188" y="{y}" width="676" height="126" rx="18" fill="{colors["card"]}" stroke="{colors["soft"]}"/>',
             f'<rect x="890" y="{y}" width="254" height="126" rx="18" fill="{colors["stats"]}" stroke="{colors["soft"]}"/>',
-            svg_text(214, y + 34, truncate_text(project["repo"], 42), 22, colors["text"], "700"),
+            svg_text(214, y + 34, truncate_text(project_title(project), 52), 22, colors["text"], "700"),
         ])
 
         for item_index, item in enumerate(project["items"]):

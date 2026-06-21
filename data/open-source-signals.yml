@@ -16,8 +16,6 @@ filters:
 featured_repos:
   - "bytedance/deer-flow"
   - "microsoft/agent-governance-toolkit"
-  - "NanmiCoder/MediaCrawler"
-  - "bcgit/bc-java"
 
 overrides:
   "https://github.com/bcgit/bc-java/issues/1355":

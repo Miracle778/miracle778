@@ -162,6 +162,7 @@ def normalize_search_item(item: dict[str, Any]) -> dict[str, Any]:
         "updated_at": item.get("updated_at"),
         "closed_at": item.get("closed_at"),
         "merged_at": None,
+        "repo_stars": None,
         "featured": False,
     }
 
@@ -232,6 +233,7 @@ def fetch_activity(config: dict[str, Any], client: GitHubClient) -> list[dict[st
 
     activities: list[dict[str, Any]] = []
     seen_urls: set[str] = set()
+    repo_stars_cache: dict[str, int | None] = {}
 
     for activity_type in include_types:
         query = build_search_query(username, activity_type, lookback_days)
@@ -247,11 +249,13 @@ def fetch_activity(config: dict[str, Any], client: GitHubClient) -> list[dict[st
             comments = _fetch_comments(client, item)
             timeline_events = _fetch_timeline(client, item)
             merged_at = _fetch_merged_at(client, item)
+            repo_stars = _fetch_repo_stars(client, item, repo_stars_cache)
 
             if _is_self_fixed_issue(activity, timeline_events, username):
                 continue
 
             activity["merged_at"] = merged_at
+            activity["repo_stars"] = repo_stars
             activity["featured"] = activity["repo"] in featured_repos
             activity["status"] = infer_status(
                 activity_type=activity["type"],
@@ -375,6 +379,19 @@ def _fetch_merged_at(client: GitHubClient, item: dict[str, Any]) -> str | None:
     if not pr_url:
         return None
     return client.get(pr_url).get("merged_at")
+
+
+def _fetch_repo_stars(
+    client: GitHubClient,
+    item: dict[str, Any],
+    repo_stars_cache: dict[str, int | None],
+) -> int | None:
+    repository_url = item.get("repository_url")
+    if not repository_url:
+        return None
+    if repository_url not in repo_stars_cache:
+        repo_stars_cache[repository_url] = client.get(repository_url).get("stargazers_count")
+    return repo_stars_cache[repository_url]
 
 
 def _is_self_fixed_issue(
