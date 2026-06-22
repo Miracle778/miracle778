@@ -11,7 +11,7 @@
 <circle cx="168" cy="174" r="8" fill="#39d6c2"/>
 <rect x="196" y="128" width="648" height="126" rx="12" fill="#ffffff" stroke="#c6d8ea"/>
 <rect x="870" y="138" width="274" height="106" rx="9" fill="#f7fcff" stroke="#c6d8ea"/>
-<text x="216" y="162" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">bytedance/deer-flow · 72.4k</text>
+<text x="216" y="162" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">bytedance/deer-flow · 72.6k</text>
 <circle cx="218" cy="187" r="2.5" fill="#059b8d"/>
 <text x="232" y="192" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR · Merged · feat(guardrails): expose authenticated runtime context in Guardra…</text>
 <g class="stats-icon total" stroke="#059b8d" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -155,15 +155,17 @@
 </g>
 <text x="924" y="708" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Merged 1</text>
 <rect x="58" y="778" width="88" height="36" rx="7" fill="#e9fbf7" stroke="#13b8a6"/>
-<text x="102" y="803" fill="#059b8d" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="middle">2025-01</text>
+<text x="102" y="803" fill="#059b8d" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="middle">2026-06</text>
 <circle cx="168" cy="798" r="18" fill="#059b8d" opacity="0.12"/>
 <circle cx="168" cy="798" r="12" fill="#39d6c2" opacity="0.45"/>
 <circle cx="168" cy="798" r="8" fill="#39d6c2"/>
 <rect x="196" y="752" width="648" height="126" rx="12" fill="#ffffff" stroke="#c6d8ea"/>
 <rect x="870" y="762" width="274" height="106" rx="9" fill="#f7fcff" stroke="#c6d8ea"/>
-<text x="216" y="786" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">oshi/oshi · 5.2k</text>
+<text x="216" y="786" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">agentrust-io/agent-manifest · 3</text>
 <circle cx="218" cy="811" r="2.5" fill="#059b8d"/>
-<text x="232" y="816" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Issue · Fixed · Memory speed unit &quot;MT/s&quot; not support parse</text>
+<text x="232" y="816" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Issue · Fixed · [cli] CLI verify cannot validate signed manifests with generated …</text>
+<circle cx="218" cy="836" r="2.5" fill="#059b8d"/>
+<text x="232" y="841" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR · Closed · feat(cli): allow CLI verify to accept a trusted public key</text>
 <g class="stats-icon total" stroke="#059b8d" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 <line x1="892" y1="788" x2="892" y2="794" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
 <line x1="899" y1="783" x2="899" y2="794" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
@@ -173,7 +175,7 @@
 <circle cx="899" cy="781" r="2" fill="#059b8d" stroke="none"/>
 <circle cx="906" cy="776" r="2" fill="#059b8d" stroke="none"/>
 </g>
-<text x="924" y="794" fill="#059b8d" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">Total 1</text>
+<text x="924" y="794" fill="#059b8d" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">Total 2</text>
 <line x1="894" y1="806" x2="1126" y2="806" stroke="#d4e2f0" stroke-width="1"/>
 <g class="stats-icon type" stroke="#059b8d" fill="none" stroke-width="2" stroke-linecap="round">
 <line x1="896" y1="823" x2="896" y2="837" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
@@ -183,12 +185,12 @@
 <circle cx="896" cy="837" r="3" fill="none" stroke="#059b8d"/>
 <circle cx="907" cy="837" r="3" fill="none" stroke="#059b8d"/>
 </g>
-<text x="924" y="838" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Issue 1</text>
+<text x="924" y="838" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR 1 · Issue 1</text>
 <g class="stats-icon status" stroke="#059b8d" fill="none" stroke-width="2" stroke-linecap="round">
 <rect x="892" y="847" width="20" height="15" rx="4"/>
 <line x1="897" y1="853" x2="907" y2="853" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
 <line x1="897" y1="857" x2="903" y2="857" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
 <circle cx="897" cy="866" r="1.8" fill="#059b8d" stroke="none"/>
 </g>
-<text x="924" y="864" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Fixed 1</text>
+<text x="924" y="864" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Fixed 1 · Closed 1</text>
 </svg>

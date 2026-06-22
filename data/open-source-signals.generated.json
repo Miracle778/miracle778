@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T17:52:53Z",
+  "generated_at": "2026-06-22T01:27:26Z",
   "username": "Miracle778",
   "activities": [
     {
@@ -15,7 +15,7 @@
       "updated_at": "2026-06-21T08:08:25Z",
       "closed_at": "2026-06-21T08:08:25Z",
       "merged_at": "2026-06-21T08:08:25Z",
-      "repo_stars": 72413,
+      "repo_stars": 72593,
       "featured": true
     },
     {
@@ -31,7 +31,7 @@
       "updated_at": "2026-06-15T20:25:15Z",
       "closed_at": "2026-06-15T20:25:14Z",
       "merged_at": "2026-06-15T20:25:14Z",
-      "repo_stars": 4428,
+      "repo_stars": 4434,
       "featured": true
     },
     {
@@ -47,7 +47,7 @@
       "updated_at": "2026-06-09T17:57:46Z",
       "closed_at": "2026-06-09T17:57:46Z",
       "merged_at": "2026-06-09T17:57:46Z",
-      "repo_stars": 4428,
+      "repo_stars": 4434,
       "featured": true
     },
     {
@@ -71,13 +71,13 @@
       "repo": "agentrust-io/agent-manifest",
       "type": "PR",
       "title": "feat(cli): allow CLI verify to accept a trusted public key",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "closed",
       "url": "https://github.com/agentrust-io/agent-manifest/pull/183",
       "number": 183,
       "created_at": "2026-06-21T07:49:36Z",
-      "updated_at": "2026-06-21T07:49:36Z",
-      "closed_at": null,
+      "updated_at": "2026-06-22T00:35:28Z",
+      "closed_at": "2026-06-22T00:35:28Z",
       "merged_at": null,
       "repo_stars": 3,
       "featured": false
@@ -87,13 +87,13 @@
       "repo": "agentrust-io/agent-manifest",
       "type": "Issue",
       "title": "[cli] CLI verify cannot validate signed manifests with generated public key",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "fixed",
       "url": "https://github.com/agentrust-io/agent-manifest/issues/182",
       "number": 182,
       "created_at": "2026-06-21T07:43:17Z",
-      "updated_at": "2026-06-21T07:43:17Z",
-      "closed_at": null,
+      "updated_at": "2026-06-22T00:35:28Z",
+      "closed_at": "2026-06-22T00:35:28Z",
       "merged_at": null,
       "repo_stars": 3,
       "featured": false
@@ -111,7 +111,7 @@
       "updated_at": "2026-06-16T12:40:47Z",
       "closed_at": "2026-06-16T12:40:47Z",
       "merged_at": "2026-06-16T12:40:47Z",
-      "repo_stars": 51568,
+      "repo_stars": 51574,
       "featured": false
     },
     {
