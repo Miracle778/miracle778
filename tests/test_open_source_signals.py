@@ -378,6 +378,24 @@ class RenderOpenSourceSignalsTests(unittest.TestCase):
 
         self.assertIn("o/r · 4.4k", svg)
 
+    def test_render_svg_shows_stats_icons(self):
+        groups = build_project_groups([{
+            "repo": "o/r",
+            "type": "PR",
+            "status": "merged",
+            "title": "Add feature",
+            "url": "https://github.com/o/r/pull/1",
+            "date": "2026-06",
+            "created_at": "2026-06-01T00:00:00Z",
+            "updated_at": "2026-06-02T00:00:00Z",
+            "featured": False,
+        }], featured_repos=[])
+        svg = render_svg(select_projects(groups, 5, 3), title="Open Source Activity", theme="dark")
+
+        self.assertIn('class="stats-icon total"', svg)
+        self.assertIn('class="stats-icon type"', svg)
+        self.assertIn('class="stats-icon status"', svg)
+
     def test_render_svg_has_title_and_no_forbidden_elements(self):
         svg = render_svg([], title="Open Source Activity", theme="dark")
         self.assertIn("Open Source Activity", svg)

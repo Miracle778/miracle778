@@ -29,24 +29,32 @@ STATUS_WEIGHTS = {
 
 THEMES = {
     "dark": {
-        "bg": "#071512",
-        "card": "#0d211d",
-        "stats": "#102a25",
-        "line": "#1d6f63",
-        "accent": "#2dd4bf",
-        "text": "#e8fff9",
-        "muted": "#8db7ae",
-        "soft": "#163832",
+        "bg": "#020b18",
+        "panel": "#061426",
+        "card": "#07182b",
+        "stats": "#081a2f",
+        "date_bg": "#031d27",
+        "line": "#00c7b4",
+        "accent": "#19f5d0",
+        "accent_soft": "#59f2d0",
+        "text": "#f4f7ff",
+        "muted": "#b8c3d8",
+        "soft": "#29415f",
+        "divider": "#2a3d58",
     },
     "light": {
-        "bg": "#f6fffc",
+        "bg": "#f4fbff",
+        "panel": "#ffffff",
         "card": "#ffffff",
-        "stats": "#ecfdf8",
-        "line": "#7dd3c7",
-        "accent": "#0f9f8f",
-        "text": "#16312d",
-        "muted": "#54716b",
-        "soft": "#d8f3ee",
+        "stats": "#f7fcff",
+        "date_bg": "#e9fbf7",
+        "line": "#13b8a6",
+        "accent": "#059b8d",
+        "accent_soft": "#39d6c2",
+        "text": "#172133",
+        "muted": "#53627a",
+        "soft": "#c6d8ea",
+        "divider": "#d4e2f0",
     },
 }
 
@@ -218,12 +226,52 @@ def svg_text(
     )
 
 
+def svg_line(x1: int, y1: int, x2: int, y2: int, color: str, width: int = 2) -> str:
+    return f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{color}" stroke-width="{width}" stroke-linecap="round"/>'
+
+
+def stats_icon(kind: str, x: int, y: int, color: str) -> str:
+    if kind == "total":
+        return "\n".join([
+            f'<g class="stats-icon total" stroke="{color}" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
+            svg_line(x, y + 12, x, y + 18, color),
+            svg_line(x + 7, y + 7, x + 7, y + 18, color),
+            svg_line(x + 14, y + 2, x + 14, y + 18, color),
+            svg_line(x - 2, y + 20, x + 19, y + 20, color),
+            f'<circle cx="{x}" cy="{y + 10}" r="2" fill="{color}" stroke="none"/>',
+            f'<circle cx="{x + 7}" cy="{y + 5}" r="2" fill="{color}" stroke="none"/>',
+            f'<circle cx="{x + 14}" cy="{y}" r="2" fill="{color}" stroke="none"/>',
+            "</g>",
+        ])
+    if kind == "type":
+        return "\n".join([
+            f'<g class="stats-icon type" stroke="{color}" fill="none" stroke-width="2" stroke-linecap="round">',
+            svg_line(x + 4, y + 4, x + 4, y + 18, color),
+            svg_line(x + 4, y + 11, x + 15, y + 11, color),
+            svg_line(x + 15, y + 11, x + 15, y + 18, color),
+            f'<circle cx="{x + 4}" cy="{y + 4}" r="3" fill="none" stroke="{color}"/>',
+            f'<circle cx="{x + 4}" cy="{y + 18}" r="3" fill="none" stroke="{color}"/>',
+            f'<circle cx="{x + 15}" cy="{y + 18}" r="3" fill="none" stroke="{color}"/>',
+            "</g>",
+        ])
+    return "\n".join([
+        f'<g class="stats-icon status" stroke="{color}" fill="none" stroke-width="2" stroke-linecap="round">',
+        f'<rect x="{x}" y="{y + 2}" width="20" height="15" rx="4"/>',
+        svg_line(x + 5, y + 8, x + 15, y + 8, color),
+        svg_line(x + 5, y + 12, x + 11, y + 12, color),
+        f'<circle cx="{x + 5}" cy="{y + 21}" r="1.8" fill="{color}" stroke="none"/>',
+        "</g>",
+    ])
+
+
 def render_empty_svg(title: str, colors: dict[str, str]) -> str:
     return "\n".join([
         '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-label="Open Source Activity">',
         f'<rect width="1200" height="260" rx="24" fill="{colors["bg"]}"/>',
-        svg_text(56, 72, title, 34, colors["text"], "700"),
-        f'<rect x="56" y="112" width="1088" height="92" rx="18" fill="{colors["card"]}" stroke="{colors["soft"]}"/>',
+        f'<rect x="28" y="24" width="1144" height="212" rx="22" fill="{colors["panel"]}" stroke="{colors["soft"]}"/>',
+        svg_text(56, 76, title, 34, colors["text"], "700"),
+        f'<line x1="56" y1="104" x2="1144" y2="104" stroke="{colors["divider"]}" stroke-width="1"/>',
+        f'<rect x="56" y="128" width="1088" height="70" rx="14" fill="{colors["card"]}" stroke="{colors["soft"]}"/>',
         svg_text(600, 166, "No open source activity found yet.", 24, colors["muted"], "500", "middle"),
         "</svg>",
     ])
@@ -235,41 +283,48 @@ def render_svg(projects: list[dict[str, Any]], title: str, theme: str) -> str:
         return render_empty_svg(title, colors)
 
     row_height = 156
-    height = 116 + row_height * len(projects) + 34
+    height = 138 + row_height * len(projects) + 48
     output = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{height}" viewBox="0 0 1200 {height}" role="img" aria-label="Open Source Activity">',
         f'<rect width="1200" height="{height}" rx="24" fill="{colors["bg"]}"/>',
-        svg_text(56, 72, title, 34, colors["text"], "700"),
-        f'<line x1="154" y1="120" x2="154" y2="{height - 56}" stroke="{colors["line"]}" stroke-width="2"/>',
+        f'<rect x="28" y="24" width="1144" height="{height - 48}" rx="22" fill="{colors["panel"]}" stroke="{colors["soft"]}"/>',
+        svg_text(56, 76, title, 34, colors["text"], "700"),
+        f'<line x1="56" y1="104" x2="1144" y2="104" stroke="{colors["divider"]}" stroke-width="1"/>',
+        f'<line x1="168" y1="132" x2="168" y2="{height - 74}" stroke="{colors["line"]}" stroke-width="3" opacity="0.78"/>',
     ]
 
     for index, project in enumerate(projects):
-        y = 116 + index * row_height
+        y = 128 + index * row_height
         dot_y = y + 46
         latest_date = (project.get("timeline_date") or "")[:7]
         output.extend([
-            svg_text(56, dot_y + 6, latest_date, 18, colors["muted"], "600"),
-            f'<circle cx="154" cy="{dot_y}" r="9" fill="{colors["accent"]}"/>',
-            f'<rect x="188" y="{y}" width="676" height="126" rx="18" fill="{colors["card"]}" stroke="{colors["soft"]}"/>',
-            f'<rect x="890" y="{y}" width="254" height="126" rx="18" fill="{colors["stats"]}" stroke="{colors["soft"]}"/>',
-            svg_text(214, y + 34, truncate_text(project_title(project), 52), 22, colors["text"], "700"),
+            f'<rect x="58" y="{dot_y - 20}" width="88" height="36" rx="7" fill="{colors["date_bg"]}" stroke="{colors["line"]}"/>',
+            svg_text(102, dot_y + 5, latest_date, 18, colors["accent"], "600", "middle"),
+            f'<circle cx="168" cy="{dot_y}" r="18" fill="{colors["accent"]}" opacity="0.12"/>',
+            f'<circle cx="168" cy="{dot_y}" r="12" fill="{colors["accent_soft"]}" opacity="0.45"/>',
+            f'<circle cx="168" cy="{dot_y}" r="8" fill="{colors["accent_soft"]}"/>',
+            f'<rect x="196" y="{y}" width="648" height="126" rx="12" fill="{colors["card"]}" stroke="{colors["soft"]}"/>',
+            f'<rect x="870" y="{y + 10}" width="274" height="106" rx="9" fill="{colors["stats"]}" stroke="{colors["soft"]}"/>',
+            svg_text(216, y + 34, truncate_text(project_title(project), 52), 22, colors["text"], "700"),
         ])
 
         for item_index, item in enumerate(project["items"]):
             item_y = y + 64 + item_index * 25
             status = title_case_status(item.get("status"))
-            label = f'{item.get("type", "Item")} · {status} · {truncate_text(item.get("title", ""), 70)}'
-            output.append(svg_text(214, item_y, label, 16, colors["muted"]))
+            label = f'{item.get("type", "Item")} · {status} · {truncate_text(item.get("title", ""), 66)}'
+            output.append(f'<circle cx="218" cy="{item_y - 5}" r="2.5" fill="{colors["accent"]}"/>')
+            output.append(svg_text(232, item_y, label, 16, colors["muted"]))
 
-        for line_index, line in enumerate(stats_lines(project["stats"])):
-            output.append(svg_text(
-                918,
-                y + 38 + line_index * 27,
-                line,
-                17,
-                colors["text"] if line_index == 0 else colors["muted"],
-                "600" if line_index == 0 else "400",
-            ))
+        stat_rows = stats_lines(project["stats"])
+        output.extend([
+            stats_icon("total", 892, y + 24, colors["accent"]),
+            svg_text(924, y + 42, stat_rows[0], 17, colors["accent"], "600"),
+            f'<line x1="894" y1="{y + 54}" x2="1126" y2="{y + 54}" stroke="{colors["divider"]}" stroke-width="1"/>',
+            stats_icon("type", 892, y + 67, colors["accent"]),
+            svg_text(924, y + 86, stat_rows[1], 16, colors["text"], "400"),
+            stats_icon("status", 892, y + 93, colors["accent"]),
+            svg_text(924, y + 112, stat_rows[2], 16, colors["text"], "400"),
+        ])
 
     output.append("</svg>")
     return "\n".join(output)
