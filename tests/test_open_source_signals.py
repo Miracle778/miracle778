@@ -407,6 +407,31 @@ class RenderOpenSourceSignalsTests(unittest.TestCase):
 
         self.assertEqual(repos, ["repo/a", "repo/b", "new/repo"])
 
+    def test_non_featured_repos_sort_by_total_count(self):
+        activities = [
+            {"repo": "repo/two", "type": "PR", "status": "merged", "title": "A", "url": "https://github.com/repo/two/pull/1", "updated_at": "2026-06-21T00:00:00Z", "date": "2026-06", "featured": True},
+            {"repo": "repo/two", "type": "Issue", "status": "merged", "title": "B", "url": "https://github.com/repo/two/issues/2", "updated_at": "2026-06-20T00:00:00Z", "date": "2026-06", "featured": False},
+            {"repo": "repo/three", "type": "Issue", "status": "closed", "title": "C", "url": "https://github.com/repo/three/issues/1", "updated_at": "2026-01-03T00:00:00Z", "date": "2026-01", "featured": False},
+            {"repo": "repo/three", "type": "Issue", "status": "closed", "title": "D", "url": "https://github.com/repo/three/issues/2", "updated_at": "2026-01-02T00:00:00Z", "date": "2026-01", "featured": False},
+            {"repo": "repo/three", "type": "Issue", "status": "closed", "title": "E", "url": "https://github.com/repo/three/issues/3", "updated_at": "2026-01-01T00:00:00Z", "date": "2026-01", "featured": False},
+        ]
+        groups = build_project_groups(activities, featured_repos=[])
+        repos = [group["repo"] for group in select_projects(groups, max_projects=5, max_items_per_project=3)]
+
+        self.assertEqual(repos[:2], ["repo/three", "repo/two"])
+
+    def test_non_featured_repos_with_same_total_sort_by_timeline_date(self):
+        activities = [
+            {"repo": "repo/old", "type": "PR", "status": "merged", "title": "A", "url": "https://github.com/repo/old/pull/1", "updated_at": "2026-06-21T00:00:00Z", "date": "2025-01", "featured": True},
+            {"repo": "repo/old", "type": "Issue", "status": "merged", "title": "B", "url": "https://github.com/repo/old/issues/2", "updated_at": "2026-06-20T00:00:00Z", "date": "2025-01", "featured": False},
+            {"repo": "repo/new", "type": "Issue", "status": "closed", "title": "C", "url": "https://github.com/repo/new/issues/1", "updated_at": "2026-01-03T00:00:00Z", "date": "2026-06", "featured": False},
+            {"repo": "repo/new", "type": "Issue", "status": "closed", "title": "D", "url": "https://github.com/repo/new/issues/2", "updated_at": "2026-01-02T00:00:00Z", "date": "2026-06", "featured": False},
+        ]
+        groups = build_project_groups(activities, featured_repos=[])
+        repos = [group["repo"] for group in select_projects(groups, max_projects=5, max_items_per_project=3)]
+
+        self.assertEqual(repos[:2], ["repo/new", "repo/old"])
+
     def test_render_svg_shows_repo_stars_in_project_title(self):
         groups = build_project_groups([{
             "repo": "o/r",

@@ -144,9 +144,8 @@ def build_project_groups(
     other_projects = sorted(
         (project for project in projects if project["featured_rank"] is None),
         key=lambda project: (
-            project["has_featured_item"],
-            project["max_status_weight"],
-            project["latest_updated_at"],
+            project["stats"]["total"],
+            project["timeline_date"],
         ),
         reverse=True,
     )

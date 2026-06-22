@@ -21,8 +21,6 @@
 
 ---
 
-## Open Source Activity
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/open-source-signals-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/open-source-signals-light.svg">
