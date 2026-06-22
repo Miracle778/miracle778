@@ -245,6 +245,19 @@ class FetchGithubActivityTests(unittest.TestCase):
         self.assertEqual([activity["repo_stars"] for activity in activities], [4400, 4400])
         self.assertEqual(client.repo_detail_calls, 1)
 
+    def test_fetch_activity_keeps_self_fixed_issues_for_stats(self):
+        client = FakeSelfFixedActivityClient()
+        activities = fetch_activity({
+            "profile": {"username": "Miracle778"},
+            "display": {"lookback_days": None},
+            "filters": {"include_types": ["Issue"], "exclude_repos": []},
+            "featured_repos": [],
+            "overrides": {},
+        }, client)
+
+        self.assertEqual(len(activities), 1)
+        self.assertTrue(activities[0]["self_fixed"])
+
 
 class FakeGitHubClient(GitHubClient):
     def __init__(self, pages):
@@ -296,6 +309,39 @@ class FakeActivityClient:
             "timeline_url": f"{GITHUB_API}/repos/o/r/issues/{number}/timeline",
             "pull_request": {"url": f"{GITHUB_API}/repos/o/r/pulls/{number}"},
         }
+
+
+class FakeSelfFixedActivityClient:
+    def get_all_pages(self, url, params=None):
+        if url == f"{GITHUB_API}/search/issues":
+            return [{
+                "html_url": "https://github.com/o/r/issues/1",
+                "repository_url": f"{GITHUB_API}/repos/o/r",
+                "title": "Issue fixed by own PR",
+                "number": 1,
+                "state": "closed",
+                "created_at": "2026-06-01T00:00:00Z",
+                "updated_at": "2026-06-02T00:00:00Z",
+                "closed_at": "2026-06-02T00:00:00Z",
+                "comments_url": f"{GITHUB_API}/repos/o/r/issues/1/comments",
+                "timeline_url": f"{GITHUB_API}/repos/o/r/issues/1/timeline",
+            }]
+        if url.endswith("/comments"):
+            return []
+        if url.endswith("/timeline"):
+            return [{
+                "event": "cross-referenced",
+                "source": {"issue": {
+                    "user": {"login": "Miracle778"},
+                    "pull_request": {"merged_at": "2026-06-02T00:00:00Z"},
+                }},
+            }]
+        return []
+
+    def get(self, url, params=None):
+        if url == f"{GITHUB_API}/repos/o/r":
+            return {"stargazers_count": 123}
+        return {}
 
 
 class RenderOpenSourceSignalsTests(unittest.TestCase):
@@ -395,6 +441,42 @@ class RenderOpenSourceSignalsTests(unittest.TestCase):
         self.assertIn('class="stats-icon total"', svg)
         self.assertIn('class="stats-icon type"', svg)
         self.assertIn('class="stats-icon status"', svg)
+
+    def test_project_stats_count_self_fixed_but_display_hides_it(self):
+        groups = build_project_groups([
+            {
+                "repo": "o/r",
+                "type": "PR",
+                "status": "open",
+                "title": "Open PR",
+                "url": "https://github.com/o/r/pull/1",
+                "date": "2026-06",
+                "created_at": "2026-06-01T00:00:00Z",
+                "updated_at": "2026-06-03T00:00:00Z",
+                "featured": False,
+                "self_fixed": False,
+            },
+            {
+                "repo": "o/r",
+                "type": "Issue",
+                "status": "fixed",
+                "title": "Self fixed issue",
+                "url": "https://github.com/o/r/issues/1",
+                "date": "2026-06",
+                "created_at": "2026-06-01T00:00:00Z",
+                "updated_at": "2026-06-02T00:00:00Z",
+                "featured": False,
+                "self_fixed": True,
+            },
+        ], featured_repos=[])
+        svg = render_svg(select_projects(groups, 5, 3), title="Open Source Activity", theme="dark")
+
+        self.assertIn("Total 2", svg)
+        self.assertIn("PR 1 · Issue 1", svg)
+        self.assertIn("Fixed 1", svg)
+        self.assertIn("Open 1", svg)
+        self.assertIn("Open PR", svg)
+        self.assertNotIn("Self fixed issue", svg)
 
     def test_render_svg_has_title_and_no_forbidden_elements(self):
         svg = render_svg([], title="Open Source Activity", theme="dark")

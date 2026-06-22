@@ -11,7 +11,7 @@
 <circle cx="168" cy="174" r="8" fill="#39d6c2"/>
 <rect x="196" y="128" width="648" height="126" rx="12" fill="#ffffff" stroke="#c6d8ea"/>
 <rect x="870" y="138" width="274" height="106" rx="9" fill="#f7fcff" stroke="#c6d8ea"/>
-<text x="216" y="162" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">bytedance/deer-flow · 72.6k</text>
+<text x="216" y="162" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">bytedance/deer-flow · 72.7k</text>
 <circle cx="218" cy="187" r="2.5" fill="#059b8d"/>
 <text x="232" y="192" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR · Merged · feat(guardrails): expose authenticated runtime context in Guardra…</text>
 <g class="stats-icon total" stroke="#059b8d" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -23,7 +23,7 @@
 <circle cx="899" cy="157" r="2" fill="#059b8d" stroke="none"/>
 <circle cx="906" cy="152" r="2" fill="#059b8d" stroke="none"/>
 </g>
-<text x="924" y="170" fill="#059b8d" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">Total 1</text>
+<text x="924" y="170" fill="#059b8d" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">Total 2</text>
 <line x1="894" y1="182" x2="1126" y2="182" stroke="#d4e2f0" stroke-width="1"/>
 <g class="stats-icon type" stroke="#059b8d" fill="none" stroke-width="2" stroke-linecap="round">
 <line x1="896" y1="199" x2="896" y2="213" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
@@ -33,14 +33,14 @@
 <circle cx="896" cy="213" r="3" fill="none" stroke="#059b8d"/>
 <circle cx="907" cy="213" r="3" fill="none" stroke="#059b8d"/>
 </g>
-<text x="924" y="214" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR 1</text>
+<text x="924" y="214" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR 1 · Issue 1</text>
 <g class="stats-icon status" stroke="#059b8d" fill="none" stroke-width="2" stroke-linecap="round">
 <rect x="892" y="223" width="20" height="15" rx="4"/>
 <line x1="897" y1="229" x2="907" y2="229" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
 <line x1="897" y1="233" x2="903" y2="233" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
 <circle cx="897" cy="242" r="1.8" fill="#059b8d" stroke="none"/>
 </g>
-<text x="924" y="240" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Merged 1</text>
+<text x="924" y="240" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Merged 1 · Fixed 1</text>
 <rect x="58" y="310" width="88" height="36" rx="7" fill="#e9fbf7" stroke="#13b8a6"/>
 <text x="102" y="335" fill="#059b8d" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="middle">2026-06</text>
 <circle cx="168" cy="330" r="18" fill="#059b8d" opacity="0.12"/>
@@ -136,7 +136,7 @@
 <circle cx="899" cy="625" r="2" fill="#059b8d" stroke="none"/>
 <circle cx="906" cy="620" r="2" fill="#059b8d" stroke="none"/>
 </g>
-<text x="924" y="638" fill="#059b8d" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">Total 1</text>
+<text x="924" y="638" fill="#059b8d" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">Total 2</text>
 <line x1="894" y1="650" x2="1126" y2="650" stroke="#d4e2f0" stroke-width="1"/>
 <g class="stats-icon type" stroke="#059b8d" fill="none" stroke-width="2" stroke-linecap="round">
 <line x1="896" y1="667" x2="896" y2="681" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
@@ -146,14 +146,14 @@
 <circle cx="896" cy="681" r="3" fill="none" stroke="#059b8d"/>
 <circle cx="907" cy="681" r="3" fill="none" stroke="#059b8d"/>
 </g>
-<text x="924" y="682" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR 1</text>
+<text x="924" y="682" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR 1 · Issue 1</text>
 <g class="stats-icon status" stroke="#059b8d" fill="none" stroke-width="2" stroke-linecap="round">
 <rect x="892" y="691" width="20" height="15" rx="4"/>
 <line x1="897" y1="697" x2="907" y2="697" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
 <line x1="897" y1="701" x2="903" y2="701" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
 <circle cx="897" cy="710" r="1.8" fill="#059b8d" stroke="none"/>
 </g>
-<text x="924" y="708" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Merged 1</text>
+<text x="924" y="708" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Merged 1 · Fixed 1</text>
 <rect x="58" y="778" width="88" height="36" rx="7" fill="#e9fbf7" stroke="#13b8a6"/>
 <text x="102" y="803" fill="#059b8d" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="middle">2026-06</text>
 <circle cx="168" cy="798" r="18" fill="#059b8d" opacity="0.12"/>

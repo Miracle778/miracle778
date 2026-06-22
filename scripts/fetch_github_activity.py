@@ -250,12 +250,11 @@ def fetch_activity(config: dict[str, Any], client: GitHubClient) -> list[dict[st
             timeline_events = _fetch_timeline(client, item)
             merged_at = _fetch_merged_at(client, item)
             repo_stars = _fetch_repo_stars(client, item, repo_stars_cache)
-
-            if _is_self_fixed_issue(activity, timeline_events, username):
-                continue
+            self_fixed = _is_self_fixed_issue(activity, timeline_events, username)
 
             activity["merged_at"] = merged_at
             activity["repo_stars"] = repo_stars
+            activity["self_fixed"] = self_fixed
             activity["featured"] = activity["repo"] in featured_repos
             activity["status"] = infer_status(
                 activity_type=activity["type"],

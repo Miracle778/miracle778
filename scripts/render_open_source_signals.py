@@ -107,6 +107,15 @@ def build_project_groups(
     projects = []
     for repo, items in grouped.items():
         sorted_items = sorted(
+            [item for item in items if not item.get("self_fixed")],
+            key=lambda item: (
+                bool(item.get("featured")),
+                status_weight(item.get("status")),
+                item.get("updated_at") or item.get("created_at") or "",
+            ),
+            reverse=True,
+        )
+        display_items = sorted_items or sorted(
             items,
             key=lambda item: (
                 bool(item.get("featured")),
@@ -121,7 +130,7 @@ def build_project_groups(
             "featured_repo": repo in featured_rank,
             "has_featured_item": any(item.get("featured") for item in items),
             "max_status_weight": max(status_weight(item.get("status")) for item in items),
-            "timeline_date": activity_month(sorted_items[0]),
+            "timeline_date": activity_month(display_items[0]),
             "latest_updated_at": max(item.get("updated_at") or item.get("created_at") or "" for item in items),
             "repo_stars": first_repo_stars(items),
             "items": sorted_items,
@@ -201,7 +210,7 @@ def stats_lines(stats: dict[str, Any]) -> list[str]:
         stats["statuses"].items(),
         key=lambda pair: (status_weight(pair[0]), pair[0]),
         reverse=True,
-    )[:3]
+    )
     status_line = " · ".join(f"{title_case_status(key)} {value}" for key, value in status_items)
     return [
         f"Total {stats['total']}",
