@@ -3,7 +3,7 @@ name: Update Open Source Activity SVG
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 16 * * *"
+    - cron: "35 17 * * *"
 
 permissions:
   contents: write

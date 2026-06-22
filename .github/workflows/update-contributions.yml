@@ -3,7 +3,7 @@ name: Update profile contributions
 on:
   workflow_dispatch:
   schedule:
-    - cron: "20 0 * * *"
+    - cron: "30 17 * * *"
 
 permissions:
   contents: write
