@@ -35,10 +35,10 @@
 |---|---|---:|---|---|---:|---|---|
 | 2026-06-21 | [agentrust-io/agent-manifest](https://github.com/agentrust-io/agent-manifest) | 5 | PR | [feat(cli): allow CLI verify to accept a trusted public key](https://github.com/agentrust-io/agent-manifest/pull/183) | 0 | Closed | Closed |
 | 2026-06-21 | [agentrust-io/agent-manifest](https://github.com/agentrust-io/agent-manifest) | 5 | Issue | [[cli] CLI verify cannot validate signed manifests with generated public key](https://github.com/agentrust-io/agent-manifest/issues/182) | 0 | Closed | Fixed by PR #188 |
-| 2026-06-20 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 74.7k | PR | [feat(guardrails): expose authenticated runtime context in GuardrailRequest](https://github.com/bytedance/deer-flow/pull/3665) | 9 | Merged | Accepted |
+| 2026-06-20 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 74.9k | PR | [feat(guardrails): expose authenticated runtime context in GuardrailRequest](https://github.com/bytedance/deer-flow/pull/3665) | 9 | Merged | Accepted |
 | 2026-06-14 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.5k | PR | [feat(examples): add DeerFlow governed example with AGT policy and audit integration](https://github.com/microsoft/agent-governance-toolkit/pull/3020) | 7 | Merged | Accepted |
 | 2026-06-02 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.5k | PR | [fix: record denied MCP example tool calls](https://github.com/microsoft/agent-governance-toolkit/pull/2774) | 5 | Merged | Accepted |
-| 2026-05-31 | [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 52.7k | PR | [fix: 修复知乎 specified_id 和已有 Chrome CDP 连接问题](https://github.com/NanmiCoder/MediaCrawler/pull/909) | 0 | Merged | Accepted |
+| 2026-05-31 | [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 53.3k | PR | [fix: 修复知乎 specified_id 和已有 Chrome CDP 连接问题](https://github.com/NanmiCoder/MediaCrawler/pull/909) | 0 | Merged | Accepted |
 | 2025-01-14 | [oshi/oshi](https://github.com/oshi/oshi) | 5.2k | Issue | [Memory speed unit "MT/s" not support parse](https://github.com/oshi/oshi/issues/2792) | 5 | Closed | Fixed by PR #2796 |
 | 2023-03-15 | [bcgit/bc-java](https://github.com/bcgit/bc-java) | 2.7k | Issue | [When the ContentType is 1.2.156.10197.6.1.4.2.2 (SM2SignedData), can I get a certificate by the generateCertificates function?](https://github.com/bcgit/bc-java/issues/1355) | 1 | Closed | Completed by maintainer |
 
