@@ -1,7 +1,41 @@
 {
-  "generated_at": "2026-06-27T18:46:56Z",
+  "generated_at": "2026-06-28T06:53:38Z",
   "username": "Miracle778",
   "activities": [
+    {
+      "date": "2026-06",
+      "repo": "bytedance/deer-flow",
+      "type": "PR",
+      "title": "feat(guardrails): persist security interventions as run events",
+      "state": "open",
+      "status": "open",
+      "url": "https://github.com/bytedance/deer-flow/pull/3837",
+      "number": 3837,
+      "created_at": "2026-06-27T18:48:05Z",
+      "updated_at": "2026-06-28T06:16:33Z",
+      "closed_at": null,
+      "merged_at": null,
+      "repo_stars": 75098,
+      "featured": true,
+      "self_fixed": false
+    },
+    {
+      "date": "2026-06",
+      "repo": "bytedance/deer-flow",
+      "type": "Issue",
+      "title": "[feat]: Persist guardrail interventions as run events",
+      "state": "open",
+      "status": "open",
+      "url": "https://github.com/bytedance/deer-flow/issues/3836",
+      "number": 3836,
+      "created_at": "2026-06-27T18:47:15Z",
+      "updated_at": "2026-06-28T00:23:30Z",
+      "closed_at": null,
+      "merged_at": null,
+      "repo_stars": 75098,
+      "featured": true,
+      "self_fixed": false
+    },
     {
       "date": "2026-06",
       "repo": "bytedance/deer-flow",
@@ -15,7 +49,7 @@
       "updated_at": "2026-06-21T08:08:26Z",
       "closed_at": "2026-06-21T08:08:26Z",
       "merged_at": null,
-      "repo_stars": 75018,
+      "repo_stars": 75098,
       "featured": true,
       "self_fixed": true
     },
@@ -32,7 +66,7 @@
       "updated_at": "2026-06-21T08:08:25Z",
       "closed_at": "2026-06-21T08:08:25Z",
       "merged_at": "2026-06-21T08:08:25Z",
-      "repo_stars": 75018,
+      "repo_stars": 75098,
       "featured": true,
       "self_fixed": false
     },
@@ -49,7 +83,7 @@
       "updated_at": "2026-06-15T20:25:15Z",
       "closed_at": "2026-06-15T20:25:14Z",
       "merged_at": "2026-06-15T20:25:14Z",
-      "repo_stars": 4534,
+      "repo_stars": 4535,
       "featured": true,
       "self_fixed": false
     },
@@ -66,7 +100,7 @@
       "updated_at": "2026-06-09T17:57:46Z",
       "closed_at": "2026-06-09T17:57:46Z",
       "merged_at": "2026-06-09T17:57:46Z",
-      "repo_stars": 4534,
+      "repo_stars": 4535,
       "featured": true,
       "self_fixed": false
     },
@@ -134,7 +168,7 @@
       "updated_at": "2026-06-16T12:40:48Z",
       "closed_at": "2026-06-16T12:40:48Z",
       "merged_at": null,
-      "repo_stars": 53730,
+      "repo_stars": 53865,
       "featured": false,
       "self_fixed": true
     },
@@ -151,7 +185,7 @@
       "updated_at": "2026-06-16T12:40:47Z",
       "closed_at": "2026-06-16T12:40:47Z",
       "merged_at": "2026-06-16T12:40:47Z",
-      "repo_stars": 53730,
+      "repo_stars": 53865,
       "featured": false,
       "self_fixed": false
     },
