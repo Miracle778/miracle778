@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T18:48:12Z",
+  "generated_at": "2026-07-04T15:32:38Z",
   "username": "Miracle778",
   "activities": [
     {
@@ -15,7 +15,7 @@
       "updated_at": "2026-07-03T08:09:00Z",
       "closed_at": "2026-07-03T08:08:43Z",
       "merged_at": null,
-      "repo_stars": 76007,
+      "repo_stars": 76074,
       "featured": true,
       "self_fixed": true
     },
@@ -32,7 +32,7 @@
       "updated_at": "2026-07-03T08:08:42Z",
       "closed_at": "2026-07-03T08:08:42Z",
       "merged_at": "2026-07-03T08:08:41Z",
-      "repo_stars": 76007,
+      "repo_stars": 76074,
       "featured": true,
       "self_fixed": false
     },
@@ -49,7 +49,7 @@
       "updated_at": "2026-06-21T08:08:26Z",
       "closed_at": "2026-06-21T08:08:26Z",
       "merged_at": null,
-      "repo_stars": 76007,
+      "repo_stars": 76074,
       "featured": true,
       "self_fixed": true
     },
@@ -66,7 +66,7 @@
       "updated_at": "2026-06-21T08:08:25Z",
       "closed_at": "2026-06-21T08:08:25Z",
       "merged_at": "2026-06-21T08:08:25Z",
-      "repo_stars": 76007,
+      "repo_stars": 76074,
       "featured": true,
       "self_fixed": false
     },
@@ -83,7 +83,7 @@
       "updated_at": "2026-06-15T20:25:15Z",
       "closed_at": "2026-06-15T20:25:14Z",
       "merged_at": "2026-06-15T20:25:14Z",
-      "repo_stars": 4629,
+      "repo_stars": 4642,
       "featured": true,
       "self_fixed": false
     },
@@ -100,7 +100,7 @@
       "updated_at": "2026-06-09T17:57:46Z",
       "closed_at": "2026-06-09T17:57:46Z",
       "merged_at": "2026-06-09T17:57:46Z",
-      "repo_stars": 4629,
+      "repo_stars": 4642,
       "featured": true,
       "self_fixed": false
     },
@@ -119,6 +119,40 @@
       "merged_at": null,
       "repo_stars": 2661,
       "featured": true,
+      "self_fixed": false
+    },
+    {
+      "date": "2026-07",
+      "repo": "agentscope-ai/agentscope",
+      "type": "PR",
+      "title": "feat(permission): observe permission decisions and confirmations",
+      "state": "open",
+      "status": "open",
+      "url": "https://github.com/agentscope-ai/agentscope/pull/2001",
+      "number": 2001,
+      "created_at": "2026-07-04T11:17:38Z",
+      "updated_at": "2026-07-04T11:17:38Z",
+      "closed_at": null,
+      "merged_at": null,
+      "repo_stars": 27456,
+      "featured": false,
+      "self_fixed": false
+    },
+    {
+      "date": "2026-07",
+      "repo": "agentscope-ai/agentscope",
+      "type": "Issue",
+      "title": "feat(permission): observe permission decisions and confirmations in middleware",
+      "state": "open",
+      "status": "open",
+      "url": "https://github.com/agentscope-ai/agentscope/issues/2000",
+      "number": 2000,
+      "created_at": "2026-07-04T11:17:02Z",
+      "updated_at": "2026-07-04T11:17:02Z",
+      "closed_at": null,
+      "merged_at": null,
+      "repo_stars": 27456,
+      "featured": false,
       "self_fixed": false
     },
     {
@@ -168,7 +202,7 @@
       "updated_at": "2026-06-16T12:40:48Z",
       "closed_at": "2026-06-16T12:40:48Z",
       "merged_at": null,
-      "repo_stars": 55224,
+      "repo_stars": 55286,
       "featured": false,
       "self_fixed": true
     },
@@ -185,7 +219,7 @@
       "updated_at": "2026-06-16T12:40:47Z",
       "closed_at": "2026-06-16T12:40:47Z",
       "merged_at": "2026-06-16T12:40:47Z",
-      "repo_stars": 55224,
+      "repo_stars": 55286,
       "featured": false,
       "self_fixed": false
     },
@@ -202,7 +236,7 @@
       "updated_at": "2025-01-22T04:00:03Z",
       "closed_at": "2025-01-22T04:00:03Z",
       "merged_at": null,
-      "repo_stars": 5240,
+      "repo_stars": 5241,
       "featured": false,
       "self_fixed": false
     }
