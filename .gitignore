@@ -2,3 +2,4 @@
 *.pdf
 draft.md
 .idea/
+__pycache__/

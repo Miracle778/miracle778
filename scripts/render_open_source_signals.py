@@ -20,6 +20,7 @@ LIGHT_SVG_PATH = Path("assets/open-source-signals-light.svg")
 STATUS_WEIGHTS = {
     "merged": 100,
     "fixed": 90,
+    "approved": 85,
     "accepted": 80,
     "replied": 60,
     "open": 40,

@@ -54,6 +54,15 @@ const query = `
           comments {
             totalCount
           }
+          latestOpinionatedReviews(first: 20) {
+            nodes {
+              state
+              authorAssociation
+              author {
+                login
+              }
+            }
+          }
           mergedBy {
             login
           }
@@ -87,9 +96,25 @@ function formatStars(count) {
   return String(count);
 }
 
+function isClosedApprovedPullRequest(item) {
+  if (item.__typename !== "PullRequest" || item.merged || item.state !== "CLOSED") {
+    return false;
+  }
+
+  const maintainerAssociations = new Set(["OWNER", "MEMBER", "COLLABORATOR"]);
+  const reviews = item.latestOpinionatedReviews?.nodes?.filter(Boolean) ?? [];
+  return reviews.some((review) => (
+    review.state === "APPROVED"
+    && maintainerAssociations.has(review.authorAssociation)
+  ));
+}
+
 export function statusOf(item) {
   if (item.__typename === "PullRequest" && item.merged) {
     return "Merged";
+  }
+  if (isClosedApprovedPullRequest(item)) {
+    return "Approved";
   }
 
   return item.state[0] + item.state.slice(1).toLowerCase();
@@ -99,6 +124,7 @@ export function signalOf(item, username) {
   if (item.__typename === "PullRequest") {
     if (item.merged) return "Accepted";
     if (item.state === "OPEN") return "In review";
+    if (isClosedApprovedPullRequest(item)) return "Approved";
     return "Closed";
   }
 

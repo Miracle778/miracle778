@@ -51,6 +51,7 @@ ACCEPTED_KEYWORDS = (
 STATUS_WEIGHTS = {
     "merged": 100,
     "fixed": 90,
+    "approved": 85,
     "accepted": 80,
     "replied": 60,
     "open": 40,
@@ -97,6 +98,7 @@ def infer_status(
     comments: list[dict[str, Any]],
     timeline_events: list[dict[str, Any]],
     username: str,
+    reviews: list[dict[str, Any]] | None = None,
 ) -> str:
     candidates = ["unknown"]
 
@@ -105,8 +107,11 @@ def infer_status(
     elif (state or "").lower() == "closed":
         candidates.append("closed")
 
-    if activity_type == "PR" and merged_at:
-        candidates.append("merged")
+    if activity_type == "PR":
+        if merged_at:
+            candidates.append("merged")
+        elif (state or "").lower() == "closed" and _has_maintainer_approval(reviews or [], username):
+            candidates.append("approved")
 
     maintainer_comments = [
         comment for comment in comments if is_maintainer_comment(comment, username)
@@ -249,6 +254,7 @@ def fetch_activity(config: dict[str, Any], client: GitHubClient) -> list[dict[st
             comments = _fetch_comments(client, item)
             timeline_events = _fetch_timeline(client, item)
             merged_at = _fetch_merged_at(client, item)
+            reviews = _fetch_reviews(client, item, merged_at)
             repo_stars = _fetch_repo_stars(client, item, repo_stars_cache)
             self_fixed = _is_self_fixed_issue(activity, timeline_events, username)
 
@@ -263,6 +269,7 @@ def fetch_activity(config: dict[str, Any], client: GitHubClient) -> list[dict[st
                 comments=comments,
                 timeline_events=timeline_events,
                 username=username,
+                reviews=reviews,
             )
             activities.append(apply_overrides(activity, overrides))
             seen_urls.add(activity["url"])
@@ -378,6 +385,40 @@ def _fetch_merged_at(client: GitHubClient, item: dict[str, Any]) -> str | None:
     if not pr_url:
         return None
     return client.get(pr_url).get("merged_at")
+
+
+def _fetch_reviews(
+    client: GitHubClient,
+    item: dict[str, Any],
+    merged_at: str | None,
+) -> list[dict[str, Any]]:
+    pull_request = item.get("pull_request") or {}
+    pr_url = pull_request.get("url")
+    if not pr_url or (item.get("state") or "").lower() != "closed" or merged_at:
+        return []
+    return client.get_all_pages(f"{pr_url}/reviews")
+
+
+def _has_maintainer_approval(
+    reviews: list[dict[str, Any]],
+    username: str,
+) -> bool:
+    latest_states: dict[str, str] = {}
+    for review in sorted(reviews, key=lambda item: item.get("submitted_at") or ""):
+        user = review.get("user") or {}
+        login = user.get("login") or ""
+        user_type = user.get("type") or ""
+        association = (review.get("author_association") or "").upper()
+        state = (review.get("state") or "").upper()
+
+        if not login or login.lower() == username.lower() or user_type.lower() == "bot":
+            continue
+        if association not in MAINTAINER_ASSOCIATIONS:
+            continue
+        if state in {"APPROVED", "CHANGES_REQUESTED", "DISMISSED"}:
+            latest_states[login.lower()] = state
+
+    return any(state == "APPROVED" for state in latest_states.values())
 
 
 def _fetch_repo_stars(

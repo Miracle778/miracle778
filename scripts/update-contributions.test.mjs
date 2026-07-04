@@ -4,6 +4,7 @@ import test from "node:test";
 import {
   buildContributionsTable,
   signalOf,
+  statusOf,
 } from "./update-contributions.mjs";
 
 const username = "Miracle778";
@@ -76,6 +77,30 @@ test("buildContributionsTable hides issues that were self fixed", () => {
   assert.match(table, /fix bug from my issue/);
   assert.doesNotMatch(table, /bug I later fixed/);
   assert.doesNotMatch(table, /Self fixed/);
+});
+
+test("closed approved PR is Approved while merged PR stays Merged", () => {
+  const approvedReview = {
+    state: "APPROVED",
+    authorAssociation: "MEMBER",
+    author: { login: "maintainer" },
+  };
+  const closedApprovedPr = {
+    __typename: "PullRequest",
+    state: "CLOSED",
+    merged: false,
+    latestOpinionatedReviews: { nodes: [approvedReview] },
+  };
+  const mergedPr = {
+    ...closedApprovedPr,
+    state: "MERGED",
+    merged: true,
+  };
+
+  assert.equal(statusOf(closedApprovedPr), "Approved");
+  assert.equal(signalOf(closedApprovedPr, username), "Approved");
+  assert.equal(statusOf(mergedPr), "Merged");
+  assert.equal(signalOf(mergedPr, username), "Accepted");
 });
 
 test("signalOf summarizes issue closure reason and closing PR ownership", () => {

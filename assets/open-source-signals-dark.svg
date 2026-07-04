@@ -132,7 +132,7 @@
 <circle cx="218" cy="655" r="2.5" fill="#19f5d0"/>
 <text x="232" y="660" fill="#b8c3d8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Issue · Fixed · [cli] CLI verify cannot validate signed manifests with generated …</text>
 <circle cx="218" cy="680" r="2.5" fill="#19f5d0"/>
-<text x="232" y="685" fill="#b8c3d8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR · Closed · feat(cli): allow CLI verify to accept a trusted public key</text>
+<text x="232" y="685" fill="#b8c3d8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR · Approved · feat(cli): allow CLI verify to accept a trusted public key</text>
 <g class="stats-icon total" stroke="#19f5d0" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 <line x1="892" y1="632" x2="892" y2="638" stroke="#19f5d0" stroke-width="2" stroke-linecap="round"/>
 <line x1="899" y1="627" x2="899" y2="638" stroke="#19f5d0" stroke-width="2" stroke-linecap="round"/>
@@ -159,7 +159,7 @@
 <line x1="897" y1="701" x2="903" y2="701" stroke="#19f5d0" stroke-width="2" stroke-linecap="round"/>
 <circle cx="897" cy="710" r="1.8" fill="#19f5d0" stroke="none"/>
 </g>
-<text x="924" y="708" fill="#f4f7ff" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Fixed 1 · Closed 1</text>
+<text x="924" y="708" fill="#f4f7ff" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Fixed 1 · Approved 1</text>
 <rect x="58" y="778" width="88" height="36" rx="7" fill="#031d27" stroke="#00c7b4"/>
 <text x="102" y="803" fill="#19f5d0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="middle">2026-05</text>
 <circle cx="168" cy="798" r="18" fill="#19f5d0" opacity="0.12"/>

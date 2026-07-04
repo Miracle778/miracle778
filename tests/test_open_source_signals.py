@@ -65,6 +65,40 @@ class FetchGithubActivityTests(unittest.TestCase):
         )
         self.assertEqual(status, "merged")
 
+    def test_closed_pr_with_maintainer_approval_is_approved(self):
+        status = infer_status(
+            activity_type="PR",
+            state="closed",
+            merged_at=None,
+            comments=[],
+            timeline_events=[],
+            username="Miracle778",
+            reviews=[{
+                "state": "APPROVED",
+                "submitted_at": "2026-06-22T00:26:33Z",
+                "author_association": "MEMBER",
+                "user": {"login": "maintainer", "type": "User"},
+            }],
+        )
+        self.assertEqual(status, "approved")
+
+    def test_merged_pr_with_approval_stays_merged(self):
+        status = infer_status(
+            activity_type="PR",
+            state="closed",
+            merged_at="2026-06-22T01:00:00Z",
+            comments=[],
+            timeline_events=[],
+            username="Miracle778",
+            reviews=[{
+                "state": "APPROVED",
+                "submitted_at": "2026-06-22T00:26:33Z",
+                "author_association": "MEMBER",
+                "user": {"login": "maintainer", "type": "User"},
+            }],
+        )
+        self.assertEqual(status, "merged")
+
     def test_issue_fixed_by_cross_referenced_pr(self):
         status = infer_status(
             activity_type="Issue",
@@ -258,6 +292,22 @@ class FetchGithubActivityTests(unittest.TestCase):
         self.assertEqual(len(activities), 1)
         self.assertTrue(activities[0]["self_fixed"])
 
+    def test_fetch_activity_only_fetches_reviews_for_closed_unmerged_prs(self):
+        client = FakePrReviewActivityClient()
+        activities = fetch_activity({
+            "profile": {"username": "Miracle778"},
+            "display": {"lookback_days": None},
+            "filters": {"include_types": ["PR"], "exclude_repos": []},
+            "featured_repos": [],
+            "overrides": {},
+        }, client)
+
+        statuses = {activity["number"]: activity["status"] for activity in activities}
+        self.assertEqual(statuses, {1: "approved", 2: "merged", 3: "open"})
+        self.assertEqual(client.review_calls, [
+            f"{GITHUB_API}/repos/o/r/pulls/1/reviews",
+        ])
+
 
 class FakeGitHubClient(GitHubClient):
     def __init__(self, pages):
@@ -342,6 +392,55 @@ class FakeSelfFixedActivityClient:
         if url == f"{GITHUB_API}/repos/o/r":
             return {"stargazers_count": 123}
         return {}
+
+
+class FakePrReviewActivityClient:
+    def __init__(self):
+        self.review_calls = []
+
+    def get_all_pages(self, url, params=None):
+        if url == f"{GITHUB_API}/search/issues":
+            return [
+                self._item(1, "closed", "Closed approved PR"),
+                self._item(2, "closed", "Merged PR"),
+                self._item(3, "open", "Open PR"),
+            ]
+        if url.endswith("/reviews"):
+            self.review_calls.append(url)
+            return [{
+                "state": "APPROVED",
+                "submitted_at": "2026-06-22T00:26:33Z",
+                "author_association": "MEMBER",
+                "user": {"login": "maintainer", "type": "User"},
+            }]
+        if url.endswith("/comments") or url.endswith("/timeline"):
+            return []
+        return []
+
+    def get(self, url, params=None):
+        if url == f"{GITHUB_API}/repos/o/r":
+            return {"stargazers_count": 123}
+        if url.endswith("/pulls/2"):
+            return {"merged_at": "2026-06-22T01:00:00Z"}
+        if "/pulls/" in url:
+            return {"merged_at": None}
+        return {}
+
+    @staticmethod
+    def _item(number, state, title):
+        return {
+            "html_url": f"https://github.com/o/r/pull/{number}",
+            "repository_url": f"{GITHUB_API}/repos/o/r",
+            "title": title,
+            "number": number,
+            "state": state,
+            "created_at": "2026-06-01T00:00:00Z",
+            "updated_at": "2026-06-02T00:00:00Z",
+            "closed_at": "2026-06-02T00:00:00Z" if state == "closed" else None,
+            "comments_url": f"{GITHUB_API}/repos/o/r/issues/{number}/comments",
+            "timeline_url": f"{GITHUB_API}/repos/o/r/issues/{number}/timeline",
+            "pull_request": {"url": f"{GITHUB_API}/repos/o/r/pulls/{number}"},
+        }
 
 
 class RenderOpenSourceSignalsTests(unittest.TestCase):
