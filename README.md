@@ -33,12 +33,12 @@
 <!-- CONTRIBUTIONS:START -->
 | Date | Repository | Stars | Type | Record | Discuss | Status | Signal |
 |---|---|---:|---|---|---:|---|---|
-| 2026-07-04 | [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) | 27.5k | PR | [feat(permission): observe permission decisions and confirmations](https://github.com/agentscope-ai/agentscope/pull/2001) | 2 | Open | In review |
-| 2026-07-04 | [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) | 27.5k | Issue | [feat(permission): observe permission decisions and confirmations in middleware](https://github.com/agentscope-ai/agentscope/issues/2000) | 0 | Open | Open |
-| 2026-06-27 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 76.3k | PR | [feat(guardrails): persist security interventions as run events](https://github.com/bytedance/deer-flow/pull/3837) | 7 | Merged | Accepted |
+| 2026-07-04 | [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) | 27.6k | PR | [feat(permission): observe permission decisions and confirmations](https://github.com/agentscope-ai/agentscope/pull/2001) | 3 | Open | In review |
+| 2026-07-04 | [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) | 27.6k | Issue | [feat(permission): observe permission decisions and confirmations in middleware](https://github.com/agentscope-ai/agentscope/issues/2000) | 2 | Open | Discussed |
+| 2026-06-27 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 76.4k | PR | [feat(guardrails): persist security interventions as run events](https://github.com/bytedance/deer-flow/pull/3837) | 7 | Merged | Accepted |
 | 2026-06-21 | [agentrust-io/agent-manifest](https://github.com/agentrust-io/agent-manifest) | 6 | PR | [feat(cli): allow CLI verify to accept a trusted public key](https://github.com/agentrust-io/agent-manifest/pull/183) | 0 | Closed | Closed |
 | 2026-06-21 | [agentrust-io/agent-manifest](https://github.com/agentrust-io/agent-manifest) | 6 | Issue | [[cli] CLI verify cannot validate signed manifests with generated public key](https://github.com/agentrust-io/agent-manifest/issues/182) | 0 | Closed | Fixed by PR #188 |
-| 2026-06-20 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 76.3k | PR | [feat(guardrails): expose authenticated runtime context in GuardrailRequest](https://github.com/bytedance/deer-flow/pull/3665) | 9 | Merged | Accepted |
+| 2026-06-20 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 76.4k | PR | [feat(guardrails): expose authenticated runtime context in GuardrailRequest](https://github.com/bytedance/deer-flow/pull/3665) | 9 | Merged | Accepted |
 | 2026-06-14 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.7k | PR | [feat(examples): add DeerFlow governed example with AGT policy and audit integration](https://github.com/microsoft/agent-governance-toolkit/pull/3020) | 7 | Merged | Accepted |
 | 2026-06-02 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 4.7k | PR | [fix: record denied MCP example tool calls](https://github.com/microsoft/agent-governance-toolkit/pull/2774) | 5 | Merged | Accepted |
 
