@@ -11,7 +11,7 @@
 <circle cx="168" cy="174" r="8" fill="#39d6c2"/>
 <rect x="196" y="128" width="648" height="126" rx="12" fill="#ffffff" stroke="#c6d8ea"/>
 <rect x="870" y="138" width="274" height="106" rx="9" fill="#f7fcff" stroke="#c6d8ea"/>
-<text x="216" y="162" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">bytedance/deer-flow · 77.2k</text>
+<text x="216" y="162" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">bytedance/deer-flow · 77.3k</text>
 <circle cx="218" cy="187" r="2.5" fill="#059b8d"/>
 <text x="232" y="192" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR · Merged · feat(guardrails): persist security interventions as run events</text>
 <circle cx="218" cy="212" r="2.5" fill="#059b8d"/>
@@ -50,7 +50,7 @@
 <circle cx="168" cy="330" r="8" fill="#39d6c2"/>
 <rect x="196" y="284" width="648" height="126" rx="12" fill="#ffffff" stroke="#c6d8ea"/>
 <rect x="870" y="294" width="274" height="106" rx="9" fill="#f7fcff" stroke="#c6d8ea"/>
-<text x="216" y="318" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">microsoft/agent-governance-toolkit · 4.8k</text>
+<text x="216" y="318" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">microsoft/agent-governance-toolkit · 4.9k</text>
 <circle cx="218" cy="343" r="2.5" fill="#059b8d"/>
 <text x="232" y="348" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR · Merged · feat(examples): add DeerFlow governed example with AGT policy and…</text>
 <circle cx="218" cy="368" r="2.5" fill="#059b8d"/>
@@ -89,11 +89,11 @@
 <circle cx="168" cy="486" r="8" fill="#39d6c2"/>
 <rect x="196" y="440" width="648" height="126" rx="12" fill="#ffffff" stroke="#c6d8ea"/>
 <rect x="870" y="450" width="274" height="106" rx="9" fill="#f7fcff" stroke="#c6d8ea"/>
-<text x="216" y="474" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">agentscope-ai/agentscope · 27.9k</text>
+<text x="216" y="474" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">agentscope-ai/agentscope · 28.0k</text>
 <circle cx="218" cy="499" r="2.5" fill="#059b8d"/>
-<text x="232" y="504" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Issue · Replied · feat(permission): observe permission decisions and confirmations …</text>
+<text x="232" y="504" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR · Replied · feat(middleware): add on_check_permission hook</text>
 <circle cx="218" cy="524" r="2.5" fill="#059b8d"/>
-<text x="232" y="529" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR · Replied · feat(permission): observe permission decisions and confirmations</text>
+<text x="232" y="529" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Issue · Replied · feat(middleware): expose permission checking through middleware</text>
 <g class="stats-icon total" stroke="#059b8d" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 <line x1="892" y1="476" x2="892" y2="482" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
 <line x1="899" y1="471" x2="899" y2="482" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
@@ -167,7 +167,7 @@
 <circle cx="168" cy="798" r="8" fill="#39d6c2"/>
 <rect x="196" y="752" width="648" height="126" rx="12" fill="#ffffff" stroke="#c6d8ea"/>
 <rect x="870" y="762" width="274" height="106" rx="9" fill="#f7fcff" stroke="#c6d8ea"/>
-<text x="216" y="786" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">NanmiCoder/MediaCrawler · 56.7k</text>
+<text x="216" y="786" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">NanmiCoder/MediaCrawler · 56.8k</text>
 <circle cx="218" cy="811" r="2.5" fill="#059b8d"/>
 <text x="232" y="816" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR · Merged · fix: 修复知乎 specified_id 和已有 Chrome CDP 连接问题</text>
 <g class="stats-icon total" stroke="#059b8d" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
