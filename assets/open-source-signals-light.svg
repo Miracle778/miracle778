@@ -91,9 +91,9 @@
 <rect x="870" y="450" width="274" height="106" rx="9" fill="#f7fcff" stroke="#c6d8ea"/>
 <text x="216" y="474" fill="#172133" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">agentscope-ai/agentscope · 28.1k</text>
 <circle cx="218" cy="499" r="2.5" fill="#059b8d"/>
-<text x="232" y="504" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR · Replied · feat(middleware): add on_check_permission hook</text>
+<text x="232" y="504" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Issue · Replied · feat(middleware): expose permission checking through middleware</text>
 <circle cx="218" cy="524" r="2.5" fill="#059b8d"/>
-<text x="232" y="529" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Issue · Replied · feat(middleware): expose permission checking through middleware</text>
+<text x="232" y="529" fill="#53627a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR · Replied · feat(middleware): add on_check_permission hook</text>
 <g class="stats-icon total" stroke="#059b8d" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 <line x1="892" y1="476" x2="892" y2="482" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
 <line x1="899" y1="471" x2="899" y2="482" stroke="#059b8d" stroke-width="2" stroke-linecap="round"/>
