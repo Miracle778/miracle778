@@ -11,7 +11,7 @@
 <circle cx="168" cy="174" r="8" fill="#59f2d0"/>
 <rect x="196" y="128" width="648" height="126" rx="12" fill="#07182b" stroke="#29415f"/>
 <rect x="870" y="138" width="274" height="106" rx="9" fill="#081a2f" stroke="#29415f"/>
-<text x="216" y="162" fill="#f4f7ff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">bytedance/deer-flow · 77.6k</text>
+<text x="216" y="162" fill="#f4f7ff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">bytedance/deer-flow · 77.7k</text>
 <circle cx="218" cy="187" r="2.5" fill="#19f5d0"/>
 <text x="232" y="192" fill="#b8c3d8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR · Merged · feat(guardrails): persist security interventions as run events</text>
 <circle cx="218" cy="212" r="2.5" fill="#19f5d0"/>
@@ -128,7 +128,7 @@
 <circle cx="168" cy="642" r="8" fill="#59f2d0"/>
 <rect x="196" y="596" width="648" height="126" rx="12" fill="#07182b" stroke="#29415f"/>
 <rect x="870" y="606" width="274" height="106" rx="9" fill="#081a2f" stroke="#29415f"/>
-<text x="216" y="630" fill="#f4f7ff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">agentrust-io/agent-manifest · 8</text>
+<text x="216" y="630" fill="#f4f7ff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">agentrust-io/agent-manifest · 9</text>
 <circle cx="218" cy="655" r="2.5" fill="#19f5d0"/>
 <text x="232" y="660" fill="#b8c3d8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Issue · Fixed · [cli] CLI verify cannot validate signed manifests with generated …</text>
 <circle cx="218" cy="680" r="2.5" fill="#19f5d0"/>
@@ -167,7 +167,7 @@
 <circle cx="168" cy="798" r="8" fill="#59f2d0"/>
 <rect x="196" y="752" width="648" height="126" rx="12" fill="#07182b" stroke="#29415f"/>
 <rect x="870" y="762" width="274" height="106" rx="9" fill="#081a2f" stroke="#29415f"/>
-<text x="216" y="786" fill="#f4f7ff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">NanmiCoder/MediaCrawler · 57.1k</text>
+<text x="216" y="786" fill="#f4f7ff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">NanmiCoder/MediaCrawler · 57.2k</text>
 <circle cx="218" cy="811" r="2.5" fill="#19f5d0"/>
 <text x="232" y="816" fill="#b8c3d8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">PR · Merged · fix: 修复知乎 specified_id 和已有 Chrome CDP 连接问题</text>
 <g class="stats-icon total" stroke="#19f5d0" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
