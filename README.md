@@ -33,8 +33,8 @@
 <!-- CONTRIBUTIONS:START -->
 | Date | Repository | Stars | Type | Record | Discuss | Status | Signal |
 |---|---|---:|---|---|---:|---|---|
-| 2026-07-04 | [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) | 28.2k | PR | [feat(middleware): add on_check_permission hook](https://github.com/agentscope-ai/agentscope/pull/2001) | 6 | Open | In review |
-| 2026-07-04 | [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) | 28.2k | Issue | [feat(middleware): expose permission checking through middleware](https://github.com/agentscope-ai/agentscope/issues/2000) | 2 | Open | Discussed |
+| 2026-07-04 | [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) | 28.3k | PR | [feat(middleware): add on_check_permission hook](https://github.com/agentscope-ai/agentscope/pull/2001) | 6 | Open | In review |
+| 2026-07-04 | [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) | 28.3k | Issue | [feat(middleware): expose permission checking through middleware](https://github.com/agentscope-ai/agentscope/issues/2000) | 2 | Open | Discussed |
 | 2026-06-27 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 77.8k | PR | [feat(guardrails): persist security interventions as run events](https://github.com/bytedance/deer-flow/pull/3837) | 7 | Merged | Accepted |
 | 2026-06-21 | [agentrust-io/agent-manifest](https://github.com/agentrust-io/agent-manifest) | 9 | PR | [feat(cli): allow CLI verify to accept a trusted public key](https://github.com/agentrust-io/agent-manifest/pull/183) | 0 | Closed | Closed |
 | 2026-06-21 | [agentrust-io/agent-manifest](https://github.com/agentrust-io/agent-manifest) | 9 | Issue | [[cli] CLI verify cannot validate signed manifests with generated public key](https://github.com/agentrust-io/agent-manifest/issues/182) | 0 | Closed | Fixed by PR #188 |
