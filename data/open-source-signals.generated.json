@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T18:58:46Z",
+  "generated_at": "2026-07-28T18:54:50Z",
   "username": "Miracle778",
   "activities": [
     {
@@ -15,7 +15,7 @@
       "updated_at": "2026-07-03T08:09:00Z",
       "closed_at": "2026-07-03T08:08:43Z",
       "merged_at": null,
-      "repo_stars": 77970,
+      "repo_stars": 78071,
       "featured": true,
       "self_fixed": true
     },
@@ -32,7 +32,7 @@
       "updated_at": "2026-07-03T08:08:42Z",
       "closed_at": "2026-07-03T08:08:42Z",
       "merged_at": "2026-07-03T08:08:41Z",
-      "repo_stars": 77970,
+      "repo_stars": 78071,
       "featured": true,
       "self_fixed": false
     },
@@ -49,7 +49,7 @@
       "updated_at": "2026-06-21T08:08:26Z",
       "closed_at": "2026-06-21T08:08:26Z",
       "merged_at": null,
-      "repo_stars": 77970,
+      "repo_stars": 78071,
       "featured": true,
       "self_fixed": true
     },
@@ -66,7 +66,7 @@
       "updated_at": "2026-06-21T08:08:25Z",
       "closed_at": "2026-06-21T08:08:25Z",
       "merged_at": "2026-06-21T08:08:25Z",
-      "repo_stars": 77970,
+      "repo_stars": 78071,
       "featured": true,
       "self_fixed": false
     },
@@ -83,7 +83,7 @@
       "updated_at": "2026-06-15T20:25:15Z",
       "closed_at": "2026-06-15T20:25:14Z",
       "merged_at": "2026-06-15T20:25:14Z",
-      "repo_stars": 4943,
+      "repo_stars": 5102,
       "featured": true,
       "self_fixed": false
     },
@@ -100,7 +100,7 @@
       "updated_at": "2026-06-09T17:57:46Z",
       "closed_at": "2026-06-09T17:57:46Z",
       "merged_at": "2026-06-09T17:57:46Z",
-      "repo_stars": 4943,
+      "repo_stars": 5102,
       "featured": true,
       "self_fixed": false
     },
@@ -117,8 +117,25 @@
       "updated_at": "2026-05-11T05:44:42Z",
       "closed_at": "2026-05-11T05:44:42Z",
       "merged_at": null,
-      "repo_stars": 2672,
+      "repo_stars": 2671,
       "featured": true,
+      "self_fixed": false
+    },
+    {
+      "date": "2026-07",
+      "repo": "Miracle778/cyber-interview-agent",
+      "type": "PR",
+      "title": "feat: stabilize review and personal profile workflows",
+      "state": "closed",
+      "status": "merged",
+      "url": "https://github.com/Miracle778/cyber-interview-agent/pull/1",
+      "number": 1,
+      "created_at": "2026-07-28T03:06:12Z",
+      "updated_at": "2026-07-28T03:07:09Z",
+      "closed_at": "2026-07-28T03:07:09Z",
+      "merged_at": "2026-07-28T03:07:09Z",
+      "repo_stars": 1,
+      "featured": false,
       "self_fixed": false
     },
     {
@@ -134,7 +151,7 @@
       "updated_at": "2026-07-27T04:58:02Z",
       "closed_at": "2026-07-27T04:58:02Z",
       "merged_at": null,
-      "repo_stars": 28319,
+      "repo_stars": 28355,
       "featured": false,
       "self_fixed": true
     },
@@ -151,7 +168,7 @@
       "updated_at": "2026-07-27T04:58:01Z",
       "closed_at": "2026-07-27T04:58:01Z",
       "merged_at": "2026-07-27T04:58:01Z",
-      "repo_stars": 28319,
+      "repo_stars": 28355,
       "featured": false,
       "self_fixed": false
     },
@@ -168,7 +185,7 @@
       "updated_at": "2026-06-22T00:35:28Z",
       "closed_at": "2026-06-22T00:35:28Z",
       "merged_at": null,
-      "repo_stars": 9,
+      "repo_stars": 11,
       "featured": false,
       "self_fixed": false
     },
@@ -185,7 +202,7 @@
       "updated_at": "2026-06-22T00:35:28Z",
       "closed_at": "2026-06-22T00:35:28Z",
       "merged_at": null,
-      "repo_stars": 9,
+      "repo_stars": 11,
       "featured": false,
       "self_fixed": false
     },
@@ -202,7 +219,7 @@
       "updated_at": "2026-06-16T12:40:48Z",
       "closed_at": "2026-06-16T12:40:48Z",
       "merged_at": null,
-      "repo_stars": 58107,
+      "repo_stars": 58819,
       "featured": false,
       "self_fixed": true
     },
@@ -219,7 +236,7 @@
       "updated_at": "2026-06-16T12:40:47Z",
       "closed_at": "2026-06-16T12:40:47Z",
       "merged_at": "2026-06-16T12:40:47Z",
-      "repo_stars": 58107,
+      "repo_stars": 58819,
       "featured": false,
       "self_fixed": false
     },
