@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T18:57:56Z",
+  "generated_at": "2026-07-31T18:55:54Z",
   "username": "Miracle778",
   "activities": [
     {
@@ -15,7 +15,7 @@
       "updated_at": "2026-07-03T08:09:00Z",
       "closed_at": "2026-07-03T08:08:43Z",
       "merged_at": null,
-      "repo_stars": 78219,
+      "repo_stars": 78414,
       "featured": true,
       "self_fixed": true
     },
@@ -32,7 +32,7 @@
       "updated_at": "2026-07-03T08:08:42Z",
       "closed_at": "2026-07-03T08:08:42Z",
       "merged_at": "2026-07-03T08:08:41Z",
-      "repo_stars": 78219,
+      "repo_stars": 78414,
       "featured": true,
       "self_fixed": false
     },
@@ -49,7 +49,7 @@
       "updated_at": "2026-06-21T08:08:26Z",
       "closed_at": "2026-06-21T08:08:26Z",
       "merged_at": null,
-      "repo_stars": 78219,
+      "repo_stars": 78414,
       "featured": true,
       "self_fixed": true
     },
@@ -66,7 +66,7 @@
       "updated_at": "2026-06-21T08:08:25Z",
       "closed_at": "2026-06-21T08:08:25Z",
       "merged_at": "2026-06-21T08:08:25Z",
-      "repo_stars": 78219,
+      "repo_stars": 78414,
       "featured": true,
       "self_fixed": false
     },
@@ -83,7 +83,7 @@
       "updated_at": "2026-06-15T20:25:15Z",
       "closed_at": "2026-06-15T20:25:14Z",
       "merged_at": "2026-06-15T20:25:14Z",
-      "repo_stars": 5494,
+      "repo_stars": 5531,
       "featured": true,
       "self_fixed": false
     },
@@ -100,7 +100,7 @@
       "updated_at": "2026-06-09T17:57:46Z",
       "closed_at": "2026-06-09T17:57:46Z",
       "merged_at": "2026-06-09T17:57:46Z",
-      "repo_stars": 5494,
+      "repo_stars": 5531,
       "featured": true,
       "self_fixed": false
     },
@@ -125,15 +125,49 @@
       "date": "2026-07",
       "repo": "Miracle778/cyber-interview-agent",
       "type": "PR",
+      "title": "fix(quality): address actionable Sonar findings",
+      "state": "closed",
+      "status": "merged",
+      "url": "https://github.com/Miracle778/cyber-interview-agent/pull/7",
+      "number": 7,
+      "created_at": "2026-07-31T07:38:48Z",
+      "updated_at": "2026-07-31T08:01:34Z",
+      "closed_at": "2026-07-31T08:01:34Z",
+      "merged_at": "2026-07-31T08:01:34Z",
+      "repo_stars": 1,
+      "featured": false,
+      "self_fixed": false
+    },
+    {
+      "date": "2026-07",
+      "repo": "Miracle778/cyber-interview-agent",
+      "type": "PR",
+      "title": "ci: add GitHub and Sonar quality gates",
+      "state": "closed",
+      "status": "merged",
+      "url": "https://github.com/Miracle778/cyber-interview-agent/pull/6",
+      "number": 6,
+      "created_at": "2026-07-31T02:28:13Z",
+      "updated_at": "2026-07-31T06:42:09Z",
+      "closed_at": "2026-07-31T06:42:09Z",
+      "merged_at": "2026-07-31T06:42:09Z",
+      "repo_stars": 1,
+      "featured": false,
+      "self_fixed": false
+    },
+    {
+      "date": "2026-07",
+      "repo": "Miracle778/cyber-interview-agent",
+      "type": "PR",
       "title": "feat: refine Agent workbenches and Windows compatibility",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "merged",
       "url": "https://github.com/Miracle778/cyber-interview-agent/pull/5",
       "number": 5,
       "created_at": "2026-07-30T16:57:25Z",
-      "updated_at": "2026-07-30T16:57:25Z",
-      "closed_at": null,
-      "merged_at": null,
+      "updated_at": "2026-07-31T02:21:04Z",
+      "closed_at": "2026-07-31T02:21:04Z",
+      "merged_at": "2026-07-31T02:21:04Z",
       "repo_stars": 1,
       "featured": false,
       "self_fixed": false
@@ -219,7 +253,7 @@
       "updated_at": "2026-07-27T04:58:02Z",
       "closed_at": "2026-07-27T04:58:02Z",
       "merged_at": null,
-      "repo_stars": 28426,
+      "repo_stars": 28463,
       "featured": false,
       "self_fixed": true
     },
@@ -236,7 +270,7 @@
       "updated_at": "2026-07-27T04:58:01Z",
       "closed_at": "2026-07-27T04:58:01Z",
       "merged_at": "2026-07-27T04:58:01Z",
-      "repo_stars": 28426,
+      "repo_stars": 28463,
       "featured": false,
       "self_fixed": false
     },
@@ -287,7 +321,7 @@
       "updated_at": "2026-06-16T12:40:48Z",
       "closed_at": "2026-06-16T12:40:48Z",
       "merged_at": null,
-      "repo_stars": 59442,
+      "repo_stars": 59519,
       "featured": false,
       "self_fixed": true
     },
@@ -304,7 +338,7 @@
       "updated_at": "2026-06-16T12:40:47Z",
       "closed_at": "2026-06-16T12:40:47Z",
       "merged_at": "2026-06-16T12:40:47Z",
-      "repo_stars": 59442,
+      "repo_stars": 59519,
       "featured": false,
       "self_fixed": false
     },
