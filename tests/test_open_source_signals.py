@@ -18,6 +18,7 @@ from scripts.fetch_github_activity import (
 )
 from scripts.render_open_source_signals import (
     build_project_groups,
+    filter_activities_for_display,
     format_stars,
     render_svg,
     select_projects,
@@ -678,6 +679,32 @@ class RenderOpenSourceSignalsTests(unittest.TestCase):
 
         self.assertIn("2025-01", svg)
         self.assertNotIn("2026-06", svg)
+
+    def test_filter_activities_for_display_removes_user_owned_pull_requests(self):
+        activities = [
+            {
+                "repo": "Miracle778/cyber-interview-agent",
+                "type": "PR",
+                "title": "Own repo PR",
+            },
+            {
+                "repo": "Miracle778/cyber-interview-agent",
+                "type": "Issue",
+                "title": "Own repo issue",
+            },
+            {
+                "repo": "external/repo",
+                "type": "PR",
+                "title": "External PR",
+            },
+        ]
+
+        filtered = filter_activities_for_display(activities, "Miracle778")
+
+        self.assertEqual(
+            [activity["title"] for activity in filtered],
+            ["Own repo issue", "External PR"],
+        )
 
 
 if __name__ == "__main__":

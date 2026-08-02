@@ -96,6 +96,17 @@ def build_stats(items: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def filter_activities_for_display(
+    activities: list[dict[str, Any]],
+    username: str,
+) -> list[dict[str, Any]]:
+    return [
+        activity
+        for activity in activities
+        if not _is_user_owned_pull_request(activity, username)
+    ]
+
+
 def build_project_groups(
     activities: list[dict[str, Any]],
     featured_repos: list[str],
@@ -343,11 +354,12 @@ def render_all() -> None:
     config = load_config()
     generated = load_generated()
     display = config.get("display", {})
+    username = (config.get("profile", {}) or {}).get("username") or generated.get("username") or ""
     title = display.get("title") or "Open Source Activity"
     max_projects = int(display.get("max_projects") or 5)
     max_items_per_project = int(display.get("max_items_per_project") or 3)
     featured_repos = config.get("featured_repos") or []
-    activities = generated.get("activities") or []
+    activities = filter_activities_for_display(generated.get("activities") or [], username)
 
     projects = select_projects(
         build_project_groups(activities, featured_repos),
@@ -359,6 +371,13 @@ def render_all() -> None:
     DARK_SVG_PATH.write_text(render_svg(projects, title, "dark") + "\n", encoding="utf-8")
     LIGHT_SVG_PATH.write_text(render_svg(projects, title, "light") + "\n", encoding="utf-8")
     print(f"Wrote {DARK_SVG_PATH} and {LIGHT_SVG_PATH}")
+
+
+def _is_user_owned_pull_request(activity: dict[str, Any], username: str) -> bool:
+    if activity.get("type") != "PR" or not username:
+        return False
+    owner = (activity.get("repo") or "").split("/", 1)[0]
+    return owner.lower() == username.lower()
 
 
 if __name__ == "__main__":
