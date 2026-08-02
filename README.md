@@ -33,14 +33,14 @@
 <!-- CONTRIBUTIONS:START -->
 | Date | Repository | Stars | Type | Record | Discuss | Status | Signal |
 |---|---|---:|---|---|---:|---|---|
-| 2026-07-31 | [Miracle778/cyber-interview-agent](https://github.com/Miracle778/cyber-interview-agent) | 1 | PR | [fix(quality): address actionable Sonar findings](https://github.com/Miracle778/cyber-interview-agent/pull/7) | 1 | Merged | Accepted |
-| 2026-07-31 | [Miracle778/cyber-interview-agent](https://github.com/Miracle778/cyber-interview-agent) | 1 | PR | [ci: add GitHub and Sonar quality gates](https://github.com/Miracle778/cyber-interview-agent/pull/6) | 1 | Merged | Accepted |
-| 2026-07-30 | [Miracle778/cyber-interview-agent](https://github.com/Miracle778/cyber-interview-agent) | 1 | PR | [feat: refine Agent workbenches and Windows compatibility](https://github.com/Miracle778/cyber-interview-agent/pull/5) | 0 | Merged | Accepted |
-| 2026-07-30 | [Miracle778/cyber-interview-agent](https://github.com/Miracle778/cyber-interview-agent) | 1 | PR | [fix: read JSONL trace content on Windows](https://github.com/Miracle778/cyber-interview-agent/pull/4) | 0 | Merged | Accepted |
-| 2026-07-30 | [Miracle778/cyber-interview-agent](https://github.com/Miracle778/cyber-interview-agent) | 1 | PR | [fix: support JSONL trace writes on Windows](https://github.com/Miracle778/cyber-interview-agent/pull/3) | 0 | Merged | Accepted |
-| 2026-07-30 | [Miracle778/cyber-interview-agent](https://github.com/Miracle778/cyber-interview-agent) | 1 | PR | [feat: add Agent observability and quality workbench](https://github.com/Miracle778/cyber-interview-agent/pull/2) | 0 | Merged | Accepted |
-| 2026-07-28 | [Miracle778/cyber-interview-agent](https://github.com/Miracle778/cyber-interview-agent) | 1 | PR | [feat: stabilize review and personal profile workflows](https://github.com/Miracle778/cyber-interview-agent/pull/1) | 0 | Merged | Accepted |
-| 2026-07-04 | [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) | 28.5k | PR | [feat(middleware): add on_check_permission hook](https://github.com/agentscope-ai/agentscope/pull/2001) | 7 | Merged | Accepted |
+| 2026-07-04 | [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) | 28.5k | PR | [feat(middleware): add on_check_permission hook](https://github.com/agentscope-ai/agentscope/pull/2001) | 8 | Merged | Accepted |
+| 2026-06-27 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 78.9k | PR | [feat(guardrails): persist security interventions as run events](https://github.com/bytedance/deer-flow/pull/3837) | 7 | Merged | Accepted |
+| 2026-06-21 | [agentrust-io/agent-manifest](https://github.com/agentrust-io/agent-manifest) | 11 | PR | [feat(cli): allow CLI verify to accept a trusted public key](https://github.com/agentrust-io/agent-manifest/pull/183) | 0 | Closed | Closed |
+| 2026-06-21 | [agentrust-io/agent-manifest](https://github.com/agentrust-io/agent-manifest) | 11 | Issue | [[cli] CLI verify cannot validate signed manifests with generated public key](https://github.com/agentrust-io/agent-manifest/issues/182) | 0 | Closed | Fixed by PR #188 |
+| 2026-06-20 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 78.9k | PR | [feat(guardrails): expose authenticated runtime context in GuardrailRequest](https://github.com/bytedance/deer-flow/pull/3665) | 9 | Merged | Accepted |
+| 2026-06-14 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 5.6k | PR | [feat(examples): add DeerFlow governed example with AGT policy and audit integration](https://github.com/microsoft/agent-governance-toolkit/pull/3020) | 7 | Merged | Accepted |
+| 2026-06-02 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 5.6k | PR | [fix: record denied MCP example tool calls](https://github.com/microsoft/agent-governance-toolkit/pull/2774) | 5 | Merged | Accepted |
+| 2026-05-31 | [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 59.6k | PR | [fix: 修复知乎 specified_id 和已有 Chrome CDP 连接问题](https://github.com/NanmiCoder/MediaCrawler/pull/909) | 0 | Merged | Accepted |
 
 [View all PRs](https://github.com/pulls?q=author%3AMiracle778) · [View all Issues](https://github.com/issues?q=author%3AMiracle778)
 <!-- CONTRIBUTIONS:END -->
