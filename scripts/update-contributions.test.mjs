@@ -79,6 +79,61 @@ test("buildContributionsTable hides issues that were self fixed", () => {
   assert.doesNotMatch(table, /Self fixed/);
 });
 
+test("buildContributionsTable hides pull requests in user owned repositories", () => {
+  const table = buildContributionsTable([
+    {
+      __typename: "PullRequest",
+      title: "change my profile",
+      url: "https://github.com/Miracle778/profile/pull/1",
+      state: "OPEN",
+      merged: false,
+      createdAt: "2026-01-04T00:00:00Z",
+      comments: { totalCount: 0 },
+      totalCommentsCount: 0,
+      repository: {
+        nameWithOwner: "Miracle778/profile",
+        url: "https://github.com/Miracle778/profile",
+        stargazerCount: 1,
+      },
+    },
+    {
+      __typename: "Issue",
+      title: "note in my repo",
+      url: "https://github.com/Miracle778/profile/issues/2",
+      state: "OPEN",
+      stateReason: null,
+      createdAt: "2026-01-03T00:00:00Z",
+      comments: { totalCount: 0 },
+      closedByPullRequestsReferences: { nodes: [] },
+      timelineItems: { nodes: [] },
+      repository: {
+        nameWithOwner: "Miracle778/profile",
+        url: "https://github.com/Miracle778/profile",
+        stargazerCount: 1,
+      },
+    },
+    {
+      __typename: "PullRequest",
+      title: "external contribution",
+      url: "https://github.com/external/repo/pull/3",
+      state: "OPEN",
+      merged: false,
+      createdAt: "2026-01-02T00:00:00Z",
+      comments: { totalCount: 0 },
+      totalCommentsCount: 0,
+      repository: {
+        nameWithOwner: "external/repo",
+        url: "https://github.com/external/repo",
+        stargazerCount: 100,
+      },
+    },
+  ], username, 8);
+
+  assert.doesNotMatch(table, /change my profile/);
+  assert.match(table, /note in my repo/);
+  assert.match(table, /external contribution/);
+});
+
 test("closed approved PR is Approved while merged PR stays Merged", () => {
   const approvedReview = {
     state: "APPROVED",

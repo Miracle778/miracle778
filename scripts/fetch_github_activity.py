@@ -248,7 +248,11 @@ def fetch_activity(config: dict[str, Any], client: GitHubClient) -> list[dict[st
         )
         for item in items:
             activity = normalize_search_item(item)
-            if activity["repo"] in exclude_repos or activity["url"] in seen_urls:
+            if (
+                activity["repo"] in exclude_repos
+                or activity["url"] in seen_urls
+                or _is_user_owned_pull_request(activity, username)
+            ):
                 continue
 
             comments = _fetch_comments(client, item)
@@ -334,6 +338,13 @@ def _repo_from_api_url(repository_url: str) -> str:
     if marker not in repository_url:
         return ""
     return repository_url.split(marker, 1)[1]
+
+
+def _is_user_owned_pull_request(activity: dict[str, Any], username: str) -> bool:
+    if activity.get("type") != "PR":
+        return False
+    owner = (activity.get("repo") or "").split("/", 1)[0]
+    return owner.lower() == username.lower()
 
 
 def _is_search_issues_url(url: str) -> bool:

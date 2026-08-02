@@ -168,7 +168,14 @@ function discussionCountOf(item) {
   return item.comments?.totalCount ?? 0;
 }
 
+function isUserOwnedPullRequest(item, username) {
+  if (item.__typename !== "PullRequest") return false;
+  const owner = item.repository?.nameWithOwner?.split("/", 1)[0] ?? "";
+  return owner.toLowerCase() === username.toLowerCase();
+}
+
 function shouldShowContribution(item, username) {
+  if (isUserOwnedPullRequest(item, username)) return false;
   return !(item.__typename === "Issue" && signalOf(item, username) === "Self fixed");
 }
 

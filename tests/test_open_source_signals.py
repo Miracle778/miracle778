@@ -308,6 +308,19 @@ class FetchGithubActivityTests(unittest.TestCase):
             f"{GITHUB_API}/repos/o/r/pulls/1/reviews",
         ])
 
+    def test_fetch_activity_skips_pull_requests_in_user_owned_repos(self):
+        client = FakeOwnRepoPullRequestClient()
+        activities = fetch_activity({
+            "profile": {"username": "Miracle778"},
+            "display": {"lookback_days": None},
+            "filters": {"include_types": ["PR"], "exclude_repos": []},
+            "featured_repos": [],
+            "overrides": {},
+        }, client)
+
+        self.assertEqual([activity["repo"] for activity in activities], ["external/repo"])
+        self.assertNotIn(f"{GITHUB_API}/repos/Miracle778/profile", client.detail_calls)
+
 
 class FakeGitHubClient(GitHubClient):
     def __init__(self, pages):
@@ -440,6 +453,45 @@ class FakePrReviewActivityClient:
             "comments_url": f"{GITHUB_API}/repos/o/r/issues/{number}/comments",
             "timeline_url": f"{GITHUB_API}/repos/o/r/issues/{number}/timeline",
             "pull_request": {"url": f"{GITHUB_API}/repos/o/r/pulls/{number}"},
+        }
+
+
+class FakeOwnRepoPullRequestClient:
+    def __init__(self):
+        self.detail_calls = []
+
+    def get_all_pages(self, url, params=None):
+        if url == f"{GITHUB_API}/search/issues":
+            return [
+                self._item("Miracle778/profile", 1, "Own repo PR"),
+                self._item("external/repo", 2, "External repo PR"),
+            ]
+        if url.endswith("/comments") or url.endswith("/timeline") or url.endswith("/reviews"):
+            return []
+        return []
+
+    def get(self, url, params=None):
+        self.detail_calls.append(url)
+        if url == f"{GITHUB_API}/repos/external/repo":
+            return {"stargazers_count": 42}
+        if url.endswith("/pulls/2"):
+            return {"merged_at": None}
+        return {}
+
+    @staticmethod
+    def _item(repo, number, title):
+        return {
+            "html_url": f"https://github.com/{repo}/pull/{number}",
+            "repository_url": f"{GITHUB_API}/repos/{repo}",
+            "title": title,
+            "number": number,
+            "state": "open",
+            "created_at": "2026-06-01T00:00:00Z",
+            "updated_at": "2026-06-02T00:00:00Z",
+            "closed_at": None,
+            "comments_url": f"{GITHUB_API}/repos/{repo}/issues/{number}/comments",
+            "timeline_url": f"{GITHUB_API}/repos/{repo}/issues/{number}/timeline",
+            "pull_request": {"url": f"{GITHUB_API}/repos/{repo}/pulls/{number}"},
         }
 
 
