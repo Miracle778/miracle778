@@ -33,6 +33,7 @@
 <!-- CONTRIBUTIONS:START -->
 | Date | Repository | Stars | Type | Record | Discuss | Status | Signal |
 |---|---|---:|---|---|---:|---|---|
+| 2026-09-23 | [1moles/mole_agent](https://github.com/1moles/mole_agent) | 0 | PR | [新增斜杠命令菜单、统一注册表与参数补全](https://github.com/1moles/mole_agent/pull/1) | 0 | Open | In review |
 | 2026-07-04 | [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) | 32.2k | PR | [feat(middleware): add on_check_permission hook](https://github.com/agentscope-ai/agentscope/pull/2001) | 8 | Merged | Accepted |
 | 2026-06-27 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 82.9k | PR | [feat(guardrails): persist security interventions as run events](https://github.com/bytedance/deer-flow/pull/3837) | 7 | Merged | Accepted |
 | 2026-06-21 | [agentrust-io/agent-manifest](https://github.com/agentrust-io/agent-manifest) | 18 | PR | [feat(cli): allow CLI verify to accept a trusted public key](https://github.com/agentrust-io/agent-manifest/pull/183) | 0 | Approved | Approved |
@@ -40,7 +41,6 @@
 | 2026-06-20 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 82.9k | PR | [feat(guardrails): expose authenticated runtime context in GuardrailRequest](https://github.com/bytedance/deer-flow/pull/3665) | 9 | Merged | Accepted |
 | 2026-06-14 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 6.3k | PR | [feat(examples): add DeerFlow governed example with AGT policy and audit integration](https://github.com/microsoft/agent-governance-toolkit/pull/3020) | 7 | Merged | Accepted |
 | 2026-06-02 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 6.3k | PR | [fix: record denied MCP example tool calls](https://github.com/microsoft/agent-governance-toolkit/pull/2774) | 5 | Merged | Accepted |
-| 2026-05-31 | [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 65.6k | PR | [fix: 修复知乎 specified_id 和已有 Chrome CDP 连接问题](https://github.com/NanmiCoder/MediaCrawler/pull/909) | 0 | Merged | Accepted |
 
 [View all PRs](https://github.com/pulls?q=author%3AMiracle778) · [View all Issues](https://github.com/issues?q=author%3AMiracle778)
 <!-- CONTRIBUTIONS:END -->
