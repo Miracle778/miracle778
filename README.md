@@ -35,11 +35,11 @@
 |---|---|---:|---|---|---:|---|---|
 | 2026-09-27 | [1moles/mole_agent](https://github.com/1moles/mole_agent) | 0 | PR | [feat: 新增 /init 项目规则初始化与在线刷新](https://github.com/1moles/mole_agent/pull/2) | 0 | Open | In review |
 | 2026-09-23 | [1moles/mole_agent](https://github.com/1moles/mole_agent) | 0 | PR | [新增斜杠命令菜单、统一注册表与参数补全](https://github.com/1moles/mole_agent/pull/1) | 0 | Merged | Accepted |
-| 2026-07-04 | [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) | 32.9k | PR | [feat(middleware): add on_check_permission hook](https://github.com/agentscope-ai/agentscope/pull/2001) | 8 | Merged | Accepted |
-| 2026-06-27 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 83.5k | PR | [feat(guardrails): persist security interventions as run events](https://github.com/bytedance/deer-flow/pull/3837) | 7 | Merged | Accepted |
+| 2026-07-04 | [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) | 33.0k | PR | [feat(middleware): add on_check_permission hook](https://github.com/agentscope-ai/agentscope/pull/2001) | 8 | Merged | Accepted |
+| 2026-06-27 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 83.6k | PR | [feat(guardrails): persist security interventions as run events](https://github.com/bytedance/deer-flow/pull/3837) | 7 | Merged | Accepted |
 | 2026-06-21 | [agentrust-io/agent-manifest](https://github.com/agentrust-io/agent-manifest) | 18 | PR | [feat(cli): allow CLI verify to accept a trusted public key](https://github.com/agentrust-io/agent-manifest/pull/183) | 0 | Approved | Approved |
 | 2026-06-21 | [agentrust-io/agent-manifest](https://github.com/agentrust-io/agent-manifest) | 18 | Issue | [[cli] CLI verify cannot validate signed manifests with generated public key](https://github.com/agentrust-io/agent-manifest/issues/182) | 0 | Closed | Fixed by PR #188 |
-| 2026-06-20 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 83.5k | PR | [feat(guardrails): expose authenticated runtime context in GuardrailRequest](https://github.com/bytedance/deer-flow/pull/3665) | 9 | Merged | Accepted |
+| 2026-06-20 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 83.6k | PR | [feat(guardrails): expose authenticated runtime context in GuardrailRequest](https://github.com/bytedance/deer-flow/pull/3665) | 9 | Merged | Accepted |
 | 2026-06-14 | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 6.4k | PR | [feat(examples): add DeerFlow governed example with AGT policy and audit integration](https://github.com/microsoft/agent-governance-toolkit/pull/3020) | 7 | Merged | Accepted |
 
 [View all PRs](https://github.com/pulls?q=author%3AMiracle778) · [View all Issues](https://github.com/issues?q=author%3AMiracle778)
